@@ -34,9 +34,9 @@
       panel.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
     };
-    var isOpen = function () { return toggle.getAttribute('aria-expanded') === 'true'; };
+    var isMegaOpen = function () { return toggle.getAttribute('aria-expanded') === 'true'; };
 
-    toggle.addEventListener('click', function () { setOpen(!isOpen()); });
+    toggle.addEventListener('click', function () { setOpen(!isMegaOpen()); });
 
     // Optional hover enhancement (design.md §5.1) — never the only way in.
     megaItem.addEventListener('mouseenter', function () {
@@ -51,13 +51,13 @@
     });
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && isOpen()) {
+      if (e.key === 'Escape' && isMegaOpen()) {
         setOpen(false);
         toggle.focus();
       }
     });
     document.addEventListener('click', function (e) {
-      if (isOpen() && !megaItem.contains(e.target)) setOpen(false);
+      if (isMegaOpen() && !megaItem.contains(e.target)) setOpen(false);
     });
     megaItem.addEventListener('focusout', function (e) {
       if (e.relatedTarget && !megaItem.contains(e.relatedTarget)) setOpen(false);
@@ -68,12 +68,12 @@
   var navToggle = document.querySelector('[data-nav-toggle]');
   var drawer = document.querySelector('[data-mobile-nav]');
   if (navToggle && drawer) {
-    var panel = drawer.querySelector('.drawer__panel');
+    var drawerPanel = drawer.querySelector('.drawer__panel');
     var closeBtn = drawer.querySelector('.drawer__close');
 
     var focusables = function () {
       return Array.prototype.filter.call(
-        panel.querySelectorAll('a[href], button:not([disabled])'),
+        drawerPanel.querySelectorAll('a[href], button:not([disabled])'),
         function (el) { return el.offsetParent !== null; }
       );
     };
@@ -110,7 +110,7 @@
     });
 
     // Same-page anchors (e.g. #rewards) close the drawer.
-    panel.addEventListener('click', function (e) {
+    drawerPanel.addEventListener('click', function (e) {
       if (e.target.closest('a[href]')) setDrawer(false);
     });
     window.matchMedia('(min-width: 1000px)').addEventListener('change', function (mq) {

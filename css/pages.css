@@ -264,11 +264,20 @@
   margin-top: clamp(8px, 1.4vw, 20px);
 }
 .rewards__col { display: grid; gap: clamp(12px, 1.4vw, 20px); list-style: none; margin: 0; padding: 0; }
-.rewards__cup { width: 100%; will-change: transform; }
+.rewards__cup {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* never taller than the space left in a short (laptop) viewport */
+  max-height: calc(100vh - 330px);
+  max-height: calc(100svh - 330px);
+  object-fit: contain;
+  will-change: transform;
+}
 .rewards__cta { display: flex; justify-content: center; margin-top: clamp(16px, 1.8vw, 26px); }
 
 /* Pinned mode (added by JS when motion is allowed and the screen is tall enough) */
-.rewards.is-pinned { height: 340vh; height: 340svh; }
+.rewards.is-pinned { height: 240vh; height: 240svh; }
 .rewards.is-pinned .rewards__pin { position: sticky; top: 0; height: 100vh; height: 100svh; }
 .rewards.is-pinned [data-step] {
   opacity: 0;
@@ -280,6 +289,26 @@
 :root[dir="rtl"] .rewards.is-pinned .rewards__col--start [data-step] { transform: translateX(48px); }
 :root[dir="rtl"] .rewards.is-pinned .rewards__col--end [data-step] { transform: translateX(-48px); }
 .rewards.is-pinned [data-step].is-on { opacity: 1; transform: none !important; }
+
+/* Short screens (laptops): keep the whole pinned scene inside the viewport */
+@media (min-width: 900px) and (max-height: 820px) {
+  .rewards__pin { padding-block: calc(var(--header-h-compact) + 6px) 18px; }
+  .rewards .section-head { gap: 4px; }
+  .rewards__title { font-size: clamp(1.9rem, 6.2vh, 3rem); }
+  .rewards__title .gold { display: inline; }
+  .rewards__layout { margin-top: 4px; }
+  .rewards .feature-card { padding-block: 12px; }
+  .rewards__cta { margin-top: 12px; }
+  .rewards__cup { max-height: calc(100vh - 250px); max-height: calc(100svh - 250px); }
+}
+
+/* Short tablets: one-line title and a smaller cup so the scene fits */
+@media (max-width: 899px) and (max-height: 900px) {
+  .rewards__title .gold { display: inline; }
+  .rewards__title { font-size: clamp(1.8rem, 5.5vh, 2.6rem); }
+  .rewards__cup-wrap { width: 130px; }
+  .rewards .section-head { gap: 4px; }
+}
 
 /* ---- Home: responsive ---------------------------------------------------- */
 @media (max-width: 1099px) {

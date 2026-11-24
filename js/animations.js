@@ -51,6 +51,8 @@
   if (rewards) {
     var steps = Array.prototype.slice.call(rewards.querySelectorAll('[data-step]'))
       .sort(function (a, b) { return a.getAttribute('data-step') - b.getAttribute('data-step'); });
+    var stepValues = steps.map(function (el) { return el.getAttribute('data-step'); })
+      .filter(function (v, i, arr) { return arr.indexOf(v) === i; });
     var cup = rewards.querySelector('[data-rewards-cup]');
     var tallEnough = window.matchMedia('(min-height: 620px)');
     var rTicking = false;
@@ -63,11 +65,14 @@
       var total = rewards.offsetHeight - window.innerHeight;
       var p = Math.min(Math.max(-rewards.getBoundingClientRect().top / total, 0), 1);
       // First slice shows the cup alone; each following slice reveals the next box.
-      var active = Math.floor(p * (steps.length + 1.2));
-      steps.forEach(function (el, i) { el.classList.toggle('is-on', i < active); });
+      // Elements sharing a data-step value appear together.
+      var active = Math.floor(p * (stepValues.length + 1.2));
+      steps.forEach(function (el) {
+        el.classList.toggle('is-on', stepValues.indexOf(el.getAttribute('data-step')) < active);
+      });
       if (cup) {
         // Starts alone in the middle of the screen, then settles into its slot.
-        var settle = Math.min(p * 2.2, 1);
+        var settle = Math.min(p * 5, 1); // settled before the heading appears
         var r = cup.getBoundingClientRect();
         var baseCenter = r.top + r.height / 2 - cupShift;
         var pinRect = pin.getBoundingClientRect();
@@ -75,8 +80,16 @@
         cup.style.transform = 'translateY(' + cupShift.toFixed(1) + 'px) scale(' + (1.22 - 0.22 * settle).toFixed(3) + ') rotate(' + (-6 + 6 * settle).toFixed(2) + 'deg)';
       }
     };
+    var inner = rewards.querySelector('.rewards__inner');
+    // Pin only if the whole scene fits the viewport; otherwise show it as a normal section.
+    var fits = function () {
+      var pinEl = rewards.querySelector('.rewards__pin');
+      var cs = getComputedStyle(pinEl);
+      var room = window.innerHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+      return inner.scrollHeight <= room;
+    };
     var setMode = function () {
-      var pinned = tallEnough.matches && !reduceMotion.matches;
+      var pinned = tallEnough.matches && !reduceMotion.matches && fits();
       rewards.classList.toggle('is-pinned', pinned);
       if (!pinned) {
         steps.forEach(function (el) { el.classList.remove('is-on'); });
@@ -88,7 +101,7 @@
     window.addEventListener('scroll', function () {
       if (!rTicking) { rTicking = true; window.requestAnimationFrame(updateRewards); }
     }, { passive: true });
-    window.addEventListener('resize', updateRewards);
+    window.addEventListener('resize', function () { setMode(); });
     tallEnough.addEventListener('change', setMode);
     reduceMotion.addEventListener('change', setMode);
     setMode();

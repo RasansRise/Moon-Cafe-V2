@@ -103,7 +103,6 @@
             </div>
           </li>
           <li class="primary-nav__item"><a class="primary-nav__link" href="./branches/"><span class="roll"><span class="roll__a">الفروع</span><span class="roll__b" aria-hidden="true">الفروع</span></span></a></li>
-          <li class="primary-nav__item"><a class="primary-nav__link" href="./#rewards"><span class="roll"><span class="roll__a">المكافآت</span><span class="roll__b" aria-hidden="true">المكافآت</span></span></a></li>
           <li class="primary-nav__item"><a class="primary-nav__link" href="./contact/"><span class="roll"><span class="roll__a">تواصل معنا</span><span class="roll__b" aria-hidden="true">تواصل معنا</span></span></a></li>
           <li class="primary-nav__item primary-nav__item--lang"><a class="lang-flag" href="./en/" hreflang="en" lang="en" data-lang-switch><img src="./assets/icons/flags/gb.svg" alt="" width="28" height="21"><span class="visually-hidden">English</span></a></li>
         </ul>
@@ -137,7 +136,6 @@
           <li><a class="drawer__link" href="./" aria-current="page"><span class="roll"><span class="roll__a">الرئيسية</span><span class="roll__b" aria-hidden="true">الرئيسية</span></span></a></li>
           <li><a class="drawer__link" href="./menu/"><span class="roll"><span class="roll__a">المنيو</span><span class="roll__b" aria-hidden="true">المنيو</span></span></a></li>
           <li><a class="drawer__link" href="./branches/"><span class="roll"><span class="roll__a">الفروع</span><span class="roll__b" aria-hidden="true">الفروع</span></span></a></li>
-          <li><a class="drawer__link" href="./#rewards"><span class="roll"><span class="roll__a">المكافآت</span><span class="roll__b" aria-hidden="true">المكافآت</span></span></a></li>
           <li><a class="drawer__link" href="./contact/"><span class="roll"><span class="roll__a">تواصل معنا</span><span class="roll__b" aria-hidden="true">تواصل معنا</span></span></a></li>
         </ul>
         <a class="drawer__lang" href="./en/" hreflang="en" lang="en" data-lang-switch><img src="./assets/icons/flags/gb.svg" alt="" width="28" height="21"><span>English</span></a>
@@ -328,7 +326,7 @@
                 <span class="feature-card__icon"><svg aria-hidden="true"><use href="#i-beans"/></svg></span>
                 <div><h3 class="feature-card__title">اجمع النقاط</h3><p class="feature-card__text">اجمع النقاط مع كل عملية شراء.</p></div>
               </li>
-              <li class="feature-card" data-step="4">
+              <li class="feature-card" data-step="2">
                 <span class="feature-card__icon"><svg aria-hidden="true"><use href="#i-user-plus"/></svg></span>
                 <div><h3 class="feature-card__title">انضم بسهولة</h3><p class="feature-card__text">سجّل في ثوانٍ وابدأ بجمع النقاط فورًا.</p></div>
               </li>
@@ -337,18 +335,18 @@
               <img class="rewards__cup" src="./assets/images/placeholders/rewards-cup.webp" alt="" width="252" height="312" loading="lazy" data-rewards-cup>
             </div>
             <ul class="rewards__col rewards__col--end">
-              <li class="feature-card" data-step="3">
+              <li class="feature-card" data-step="2">
                 <span class="feature-card__icon"><svg aria-hidden="true"><use href="#i-gift"/></svg></span>
                 <div><h3 class="feature-card__title">احصل على مكافآت</h3><p class="feature-card__text">استبدل نقاطك بمشروبات وأكل مجاني والمزيد.</p></div>
               </li>
-              <li class="feature-card" data-step="5">
+              <li class="feature-card" data-step="2">
                 <span class="feature-card__icon"><svg aria-hidden="true"><use href="#i-ticket"/></svg></span>
                 <div><h3 class="feature-card__title">عروض حصرية</h3><p class="feature-card__text">استمتع بعروض خاصة للأعضاء ووصول مبكر.</p></div>
               </li>
             </ul>
           </div>
 
-          <div class="rewards__cta" data-step="6">
+          <div class="rewards__cta" data-step="3">
             <!-- TODO: external rewards-program URL (target="_blank" rel="noopener") once confirmed -->
             <a class="btn btn--gold btn--lg is-pending" aria-disabled="true" data-pending="rewards-url">انضم إلى مكافآت مون <svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
           </div>
@@ -361,13 +359,15 @@
   <footer class="site-footer">
     <div class="container">
       <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <a href="./" aria-label="مون كافيه — الرئيسية"><img src="./assets/images/brand/logo.png" alt="مون كافيه" width="313" height="352" loading="lazy"></a>
+        </div>
         <nav class="footer-col" aria-labelledby="f-pages">
           <h2 class="footer-col__title" id="f-pages">الصفحات</h2>
           <ul class="footer-col__list">
             <li><a href="./">الرئيسية</a></li>
             <li><a href="./menu/">المنيو</a></li>
             <li><a href="./branches/">الفروع</a></li>
-            <li><a href="./#rewards">المكافآت</a></li>
             <li><a href="./contact/">تواصل معنا</a></li>
           </ul>
         </nav>
@@ -383,9 +383,6 @@
             <li><a class="is-pending" aria-disabled="true" data-pending="tiktok-url" aria-label="تيك توك"><svg aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
             <li><a class="is-pending" aria-disabled="true" data-pending="facebook-url" aria-label="فيسبوك"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
           </ul>
-        </div>
-        <div class="site-footer__brand">
-          <a href="./" aria-label="مون كافيه — الرئيسية"><img src="./assets/images/brand/logo.png" alt="مون كافيه" width="313" height="352" loading="lazy"></a>
         </div>
       </div>
       <p class="site-footer__copy">© <span data-year>2026</span> مون كافيه. جميع الحقوق محفوظة.</p>

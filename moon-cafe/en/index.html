@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <!-- DRAFT metadata — final copy pending (seo-strategy.md §4.1, SEO-04) -->
+  <title>Moon Café | Coffee, Drinks &amp; Bakery</title>
+  <meta name="description" content="Discover Moon Café: hot and iced coffee, refreshing drinks, bakery, sandwiches and snacks, plus our branches and Moon Rewards.">
+  <link rel="canonical" href="https://www.mooncafe-sa.com/en/">
+  <link rel="alternate" hreflang="ar-SA" href="https://www.mooncafe-sa.com/">
+  <link rel="alternate" hreflang="en" href="https://www.mooncafe-sa.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://www.mooncafe-sa.com/">
+  <meta name="theme-color" content="#080504">
+  <link rel="icon" href="/assets/images/brand/logo.png" type="image/png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Moon Café">
+  <meta property="og:title" content="Moon Café | Coffee, Drinks &amp; Bakery">
+  <meta property="og:description" content="Hot and iced coffee, refreshing drinks, bakery, sandwiches and snacks.">
+  <meta property="og:url" content="https://www.mooncafe-sa.com/en/">
+  <meta property="og:locale" content="en">
+  <meta property="og:locale:alternate" content="ar_SA">
+  <!-- TODO: og:image — real branded share image (seo-strategy.md §4.1) -->
+
+  <link rel="preload" as="image" href="/assets/images/placeholders/hero-cup-center.webp" fetchpriority="high">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+
+  <script src="/js/navigation.js" defer></script>
+  <script src="/js/animations.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</head>
+<body class="page-home">
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s-7-6.2-7-12a7 7 0 1114 0c0 5.8-7 12-7 12z" fill="currentColor"/><circle cx="12" cy="10" r="2.6" fill="#ffe7c2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M7 14h2M11 14h2M15 14h2M7 17h2M11 17h2"/></g></symbol>
+    <symbol id="i-beans" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><ellipse cx="19" cy="16" rx="11" ry="7.5" transform="rotate(-12 19 16)"/><path d="M9 18c6-1 12-5 20-5"/><ellipse cx="17" cy="32" rx="11" ry="7.5" transform="rotate(8 17 32)"/><path d="M7 31c7 1 13 2 21 3"/><ellipse cx="33" cy="25" rx="10" ry="7" transform="rotate(-4 33 25)"/><path d="M24 26c6-1 12-2 19-1"/></g></symbol>
+    <symbol id="i-user-plus" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="20" cy="15" r="8"/><path d="M5 40c0-8 7-13 15-13 4 0 7 1 10 3"/><path d="M37 30v12M31 36h12"/></g></symbol>
+    <symbol id="i-gift" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><rect x="7" y="17" width="34" height="9" rx="1.5"/><path d="M10 26v15h28V26M24 17v24"/><path d="M24 17c-3-7-12-9-12-3 0 3 6 3 12 3zM24 17c3-7 12-9 12-3 0 3-6 3-12 3z"/></g></symbol>
+    <symbol id="i-ticket" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M5 13h38v7a4 4 0 000 8v7H5v-7a4 4 0 000-8z"/><path d="M24 17.5l2 4.3 4.6.5-3.4 3.1 1 4.6-4.2-2.4-4.2 2.4 1-4.6-3.4-3.1 4.6-.5z"/></g></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.6" fill="currentColor"/></g></symbol>
+    <symbol id="i-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 3c.3 2.2 1.7 3.8 3.9 4v3.1c-1.4.1-2.7-.3-3.9-1.1v6.3c0 3.4-2.6 5.7-5.8 5.7A5.6 5.6 0 015 15.3c0-3.6 3.2-6.2 6.8-5.5v3.3c-1.7-.5-3.4.6-3.4 2.3 0 1.4 1.1 2.4 2.4 2.4 1.5 0 2.4-1 2.4-2.7V3z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 00-1.6 19.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0012 2z"/></symbol>
+  </svg>
+
+  <div class="preloader" aria-hidden="true">
+    <img src="/assets/images/brand/logo.png" alt="" width="313" height="352">
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand-logo" href="/en/" aria-label="Moon Café — Home">
+        <img src="/assets/images/brand/logo.png" alt="Moon Café" width="313" height="352">
+      </a>
+
+      <nav class="primary-nav" aria-label="Main">
+        <ul class="primary-nav__list">
+          <li class="primary-nav__item"><a class="primary-nav__link" href="/en/" aria-current="page"><span class="roll"><span class="roll__a">Home</span><span class="roll__b" aria-hidden="true">Home</span></span></a></li>
+          <li class="primary-nav__item" data-mega>
+            <a class="primary-nav__link" href="/en/menu/"><span class="roll"><span class="roll__a">Menu</span><span class="roll__b" aria-hidden="true">Menu</span></span></a>
+            <button class="mega-toggle" type="button" aria-expanded="false" aria-controls="mega-menu" data-mega-toggle>
+              <svg aria-hidden="true"><use href="#i-chevron"/></svg>
+              <span class="visually-hidden">Show menu categories</span>
+            </button>
+            <div class="mega-menu" id="mega-menu" data-mega-panel>
+              <div class="mega-menu__cols">
+                <div class="mega-menu__col">
+                  <p class="mega-menu__heading" id="mega-drinks">Drinks</p>
+                  <ul class="mega-menu__list" aria-labelledby="mega-drinks">
+                    <li><a class="mega-menu__link" href="/en/menu/hot-coffee/">Hot Coffee</a></li>
+                    <li><a class="mega-menu__link" href="/en/menu/hot-drinks/">Hot Drinks</a></li>
+                    <li><a class="mega-menu__link" href="/en/menu/iced-coffee/">Iced Coffee</a></li>
+                    <li><a class="mega-menu__link" href="/en/menu/crash/">Crash</a></li>
+                    <li><a class="mega-menu__link" href="/en/menu/refreshing-drinks/">Refreshing Drinks</a></li>
+                  </ul>
+                </div>
+                <div class="mega-menu__col">
+                  <p class="mega-menu__heading" id="mega-food">Food</p>
+                  <ul class="mega-menu__list" aria-labelledby="mega-food">
+                    <li><a class="mega-menu__link" href="/en/menu/bakery-desserts/">Bakery &amp; Desserts</a></li>
+                    <li><a class="mega-menu__link" href="/en/menu/sandwiches-croissants/">Sandwiches &amp; Croissants</a></li>
+                    <li><a class="mega-menu__link" href="/en/menu/snacks/">Snacks</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mega-menu__footer">
+                <a class="btn btn--gold btn--sm" href="/en/menu/">Explore Full Menu <svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              </div>
+            </div>
+          </li>
+          <li class="primary-nav__item"><a class="primary-nav__link" href="/en/branches/"><span class="roll"><span class="roll__a">Branches</span><span class="roll__b" aria-hidden="true">Branches</span></span></a></li>
+          <li class="primary-nav__item"><a class="primary-nav__link" href="/en/#rewards"><span class="roll"><span class="roll__a">Rewards</span><span class="roll__b" aria-hidden="true">Rewards</span></span></a></li>
+          <li class="primary-nav__item"><a class="primary-nav__link" href="/en/contact/"><span class="roll"><span class="roll__a">Contact</span><span class="roll__b" aria-hidden="true">Contact</span></span></a></li>
+          <li class="primary-nav__item primary-nav__item--lang"><a class="lang-flag" href="/" hreflang="ar" lang="ar" data-lang-switch><img src="/assets/icons/flags/sa.svg" alt="" width="28" height="21"><span class="visually-hidden">العربية</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--gold" href="/en/menu/">Explore Menu <svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+          <svg class="icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Off-canvas side menu (tablet + mobile) -->
+  <div class="drawer" id="mobile-nav" data-mobile-nav inert>
+    <div class="drawer__backdrop" data-nav-close></div>
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="drawer__top">
+        <button class="drawer__close" type="button" data-nav-close>
+          <svg aria-hidden="true"><use href="#i-close"/></svg>
+          <span class="visually-hidden">Close menu</span>
+        </button>
+      </div>
+
+      <nav class="drawer__section" aria-labelledby="d-pages">
+        <p class="drawer__title" id="d-pages">Pages</p>
+        <ul class="drawer__list">
+          <li><a class="drawer__link" href="/en/" aria-current="page"><span class="roll"><span class="roll__a">Home</span><span class="roll__b" aria-hidden="true">Home</span></span></a></li>
+          <li><a class="drawer__link" href="/en/menu/"><span class="roll"><span class="roll__a">Menu</span><span class="roll__b" aria-hidden="true">Menu</span></span></a></li>
+          <li><a class="drawer__link" href="/en/branches/"><span class="roll"><span class="roll__a">Branches</span><span class="roll__b" aria-hidden="true">Branches</span></span></a></li>
+          <li><a class="drawer__link" href="/en/#rewards"><span class="roll"><span class="roll__a">Rewards</span><span class="roll__b" aria-hidden="true">Rewards</span></span></a></li>
+          <li><a class="drawer__link" href="/en/contact/"><span class="roll"><span class="roll__a">Contact</span><span class="roll__b" aria-hidden="true">Contact</span></span></a></li>
+        </ul>
+        <a class="drawer__lang" href="/" hreflang="ar" lang="ar" data-lang-switch><img src="/assets/icons/flags/sa.svg" alt="" width="28" height="21"><span>العربية</span></a>
+      </nav>
+
+      <div class="drawer__section">
+        <p class="drawer__title">Contact</p>
+        <ul class="drawer__list">
+          <li><a class="drawer__link" href="/en/contact/"><span class="roll"><span class="roll__a">Contact us</span><span class="roll__b" aria-hidden="true">Contact us</span></span></a></li>
+        </ul>
+        <!-- TODO: phone (tel:) / email (mailto:) once supplied — no dummy values -->
+        <ul class="social-list drawer__social">
+          <li><a class="is-pending" aria-disabled="true" data-pending="instagram-url" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a class="is-pending" aria-disabled="true" data-pending="tiktok-url" aria-label="TikTok"><svg aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+          <li><a class="is-pending" aria-disabled="true" data-pending="facebook-url" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="drawer__logo">
+        <a href="/en/" aria-label="Moon Café — Home"><img src="/assets/images/brand/logo.png" alt="Moon Café" width="313" height="352" loading="lazy"></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ================= Hero ================= -->
+    <section class="hero" aria-labelledby="hero-title" data-hero>
+      <div class="container hero__content">
+        <!-- Client-supplied hero copy (2026-11-24); English is a translation pending approval -->
+        <p class="hero__eyebrow">Moon Café</p>
+        <h1 class="display hero__title" id="hero-title">A journey into the taste of great coffee</h1>
+        <p class="hero__sub">Enjoy a unique experience</p>
+        <a class="btn btn--gold btn--lg hero__cta" href="/en/menu/">Explore Menu <svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="hero__stage" data-hero-stage>
+        <svg class="hero__ribbon" viewBox="0 0 941 171" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
+          <defs>
+            <path id="ribbon-path" d="M-60 214 C 90 150, 180 92, 260 90 S 420 160, 520 158 S 690 132, 770 96 S 900 40, 1010 10"/>
+          </defs>
+          <use href="#ribbon-path" class="ribbon-edge"/>
+          <use href="#ribbon-path" class="ribbon-band"/>
+          <text class="ribbon-text" dy="3.5" data-ribbon-text>
+            <textPath href="#ribbon-path" startOffset="60" data-ribbon-path>HOT COFFEE • ICED COFFEE • BAKERY • SANDWICHES • SNACKS • HOT COFFEE • ICED COFFEE • BAKERY • SANDWICHES • SNACKS • HOT COFFEE • ICED COFFEE • BAKERY • SANDWICHES • SNACKS • HOT COFFEE • ICED COFFEE • BAKERY • SANDWICHES • SNACKS •</textPath>
+          </text>
+        </svg>
+        <!-- TODO: replace placeholder cup cut-outs with approved product renders -->
+        <img class="hero__cup hero__cup--left" src="/assets/images/placeholders/hero-cup-left.webp" alt="" width="381" height="465" data-depth="0.6">
+        <img class="hero__cup hero__cup--center" src="/assets/images/placeholders/hero-cup-center.webp" alt="Moon Café takeaway coffee cups" width="531" height="501" fetchpriority="high" data-depth="1">
+        <img class="hero__cup hero__cup--right" src="/assets/images/placeholders/hero-cup-right.webp" alt="" width="405" height="462" data-depth="0.7">
+      </div>
+
+    </section>
+
+    <!-- ================= About ================= -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 class="eyebrow about__eyebrow" id="about-title">About Moon Café</h2>
+        <!-- Summarised from client-supplied brand story (2026-11-24) -->
+        <p class="heading about__statement" data-reveal data-grow>
+          Since 2010, Moon Café has served <img class="about__pill about__pill--bean" src="/assets/images/placeholders/about-bean.webp" alt="" width="130" height="48" loading="lazy">
+          coffee, drinks, desserts and sandwiches
+          <img class="about__pill about__pill--cups" src="/assets/images/placeholders/about-cups.webp" alt="" width="168" height="48" loading="lazy">
+          from the finest natural sources at competitive prices.
+        </p>
+        <img class="about__visual" src="/assets/images/placeholders/about-cup-scene.webp" alt="" width="400" height="288" loading="lazy" data-reveal>
+      </div>
+    </section>
+
+    <!-- ================= Featured menu ================= -->
+    <section class="section featured" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div class="section-head">
+            <p class="eyebrow">Our Menu</p>
+            <h2 class="heading" id="featured-title">Drinks &amp; Food<br> for everyday</h2>
+          </div>
+          <a class="btn btn--gold" href="/en/menu/">Explore Full Menu <svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+
+        <!-- PLACEHOLDER products/prices from mockup — must come from the verified menu sheet before launch -->
+        <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Featured products" data-carousel data-i18n-goto="Show product {n}" data-i18n-status="Product {n} of {t}">
+          <button class="carousel__arrow carousel__arrow--prev" type="button" hidden data-carousel-prev>
+            <svg class="icon-flip" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+            <span class="visually-hidden">Previous product</span>
+          </button>
+          <div class="carousel__viewport" data-carousel-viewport>
+            <ul class="carousel__track" data-carousel-track>
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="1 of 4" data-index="0">
+                <article class="product-card" data-placeholder>
+                  <h3 class="product-card__name">Chocolate<br> Croissant</h3>
+                  <div class="product-card__media"><img src="/assets/images/placeholders/product-chocolate-croissant.webp" alt="Chocolate croissant" width="312" height="144" loading="lazy"></div>
+                  <ul class="price-row" aria-label="Sizes and prices"><li>Small $4.50</li><li>Medium $5.50</li><li>Large $6.50</li></ul>
+                </article>
+              </li>
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="2 of 4" data-index="1">
+                <article class="product-card" data-placeholder>
+                  <h3 class="product-card__name">Americano</h3>
+                  <div class="product-card__media"><img src="/assets/images/placeholders/product-americano.webp" alt="Iced Americano in a Moon Café glass" width="232" height="184" loading="lazy"></div>
+                  <ul class="price-row" aria-label="Sizes and prices"><li>Small $1.50</li><li>Medium $4.25</li><li>Large $6.00</li></ul>
+                </article>
+              </li>
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="3 of 4" data-index="2">
+                <article class="product-card" data-placeholder>
+                  <h3 class="product-card__name">Latte</h3>
+                  <div class="product-card__media"><img src="/assets/images/placeholders/product-latte.webp" alt="Latte in a Moon Café cup" width="240" height="184" loading="lazy"></div>
+                  <ul class="price-row" aria-label="Sizes and prices"><li>Small $4.75</li><li>Medium $5.50</li><li>Large $6.50</li></ul>
+                </article>
+              </li>
+              <li class="carousel__slide" aria-roledescription="slide" aria-label="4 of 4" data-index="3">
+                <article class="product-card" data-placeholder>
+                  <h3 class="product-card__name">Cappuccino</h3>
+                  <div class="product-card__media"><img src="/assets/images/placeholders/product-cappuccino.webp" alt="Cappuccino in a glass mug" width="244" height="184" loading="lazy"></div>
+                  <ul class="price-row" aria-label="Sizes and prices"><li>Small $4.75</li><li>Medium $5.75</li><li>Large $6.75</li></ul>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <button class="carousel__arrow carousel__arrow--next" type="button" hidden data-carousel-next>
+            <svg class="icon-flip" aria-hidden="true"><use href="#i-arrow"/></svg>
+            <span class="visually-hidden">Next product</span>
+          </button>
+          <div class="carousel__dots" data-carousel-dots></div>
+          <p class="visually-hidden" aria-live="polite" data-carousel-status></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Branches preview ================= -->
+    <section class="section branches-preview" aria-labelledby="branches-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Our Branches</p>
+          <h2 class="heading" id="branches-title">Find your<br> perfect brew</h2>
+        </div>
+
+        <!-- PLACEHOLDER branches — names, addresses, hours, photos and Maps links pending verified branch sheet (FR-10/11/12) -->
+        <ul class="branches-preview__grid">
+          <li data-reveal>
+            <article class="branch-card" data-placeholder>
+              <div class="branch-card__media"><img src="/assets/images/placeholders/branch-a.webp" alt="Interior of Moon Café University Branch A" width="766" height="218" loading="lazy"></div>
+              <div class="branch-card__body">
+                <h3 class="branch-card__name">University Branch A</h3>
+                <!-- TODO: verified Google Maps URL — no fabricated links (plan.md FR-11) -->
+                <a class="btn btn--gold branch-card__cta is-pending" aria-disabled="true" data-pending="maps-url">Get Directions <span class="cta-dot"><svg class="icon-flip" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+                <div class="branch-card__meta">
+                  <p class="branch-card__meta-item"><svg aria-hidden="true"><use href="#i-pin"/></svg><span>University Campus – Building A</span></p>
+                  <p class="branch-card__meta-item"><svg aria-hidden="true"><use href="#i-calendar"/></svg><span>SUN – THU<br>7:00 AM – 10:00 PM</span></p>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li data-reveal style="--reveal-delay:120ms">
+            <article class="branch-card" data-placeholder>
+              <div class="branch-card__media"><img src="/assets/images/placeholders/branch-b.webp" alt="Interior of Moon Café University Branch B" width="766" height="218" loading="lazy"></div>
+              <div class="branch-card__body">
+                <h3 class="branch-card__name">University Branch B</h3>
+                <a class="btn btn--gold branch-card__cta is-pending" aria-disabled="true" data-pending="maps-url">Get Directions <span class="cta-dot"><svg class="icon-flip" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+                <div class="branch-card__meta">
+                  <p class="branch-card__meta-item"><svg aria-hidden="true"><use href="#i-pin"/></svg><span>University Campus – Building B</span></p>
+                  <p class="branch-card__meta-item"><svg aria-hidden="true"><use href="#i-calendar"/></svg><span>SUN – THU<br>7:00 AM – 10:00 PM</span></p>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <div class="branches-preview__more">
+          <a class="btn btn--outline" href="/en/branches/">See All Branches <svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Rewards ================= -->
+    <!-- Full-screen, scroll-driven: the cup shows alone, then each box appears in order (js/animations.js) -->
+    <section class="rewards" id="rewards" aria-labelledby="rewards-title" data-rewards>
+      <div class="rewards__pin">
+        <div class="container rewards__inner">
+          <div class="section-head section-head--center" data-step="1">
+            <p class="eyebrow">Moon Rewards</p>
+            <h2 class="heading rewards__title" id="rewards-title">Sip. Collect. <span class="gold">Redeem.</span></h2>
+          </div>
+
+          <!-- PLACEHOLDER rewards claims from mockup — approved instructions pending (FR-14, D-06) -->
+          <div class="rewards__layout">
+            <ul class="rewards__col rewards__col--start">
+              <li class="feature-card" data-step="2">
+                <span class="feature-card__icon"><svg aria-hidden="true"><use href="#i-beans"/></svg></span>
+                <div><h3 class="feature-card__title">Earn points</h3><p class="feature-card__text">Collect points with every purchase.</p></div>
+              </li>
+              <li class="feature-card" data-step="4">
+                <span class="feature-card__icon"><svg aria-hidden="true"><use href="#i-user-plus"/></svg></span>
+                <div><h3 class="feature-card__title">Join easily</h3><p class="feature-card__text">Sign up in seconds and start earning right away.</p></div>
+              </li>
+            </ul>
+            <div class="rewards__cup-wrap">
+              <img class="rewards__cup" src="/assets/images/placeholders/rewards-cup.webp" alt="" width="252" height="312" loading="lazy" data-rewards-cup>
+            </div>
+            <ul class="rewards__col rewards__col--end">
+              <li class="feature-card" data-step="3">
+                <span class="feature-card__icon"><svg aria-hidden="true"><use href="#i-gift"/></svg></span>
+                <div><h3 class="feature-card__title">Get rewards</h3><p class="feature-card__text">Redeem your points for free drinks, food, and more.</p></div>
+              </li>
+              <li class="feature-card" data-step="5">
+                <span class="feature-card__icon"><svg aria-hidden="true"><use href="#i-ticket"/></svg></span>
+                <div><h3 class="feature-card__title">Exclusive offers</h3><p class="feature-card__text">Enjoy member-only deals and early access.</p></div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rewards__cta" data-step="6">
+            <!-- TODO: external rewards-program URL (target="_blank" rel="noopener") once confirmed -->
+            <a class="btn btn--gold btn--lg is-pending" aria-disabled="true" data-pending="rewards-url">Join Moon Rewards <svg class="btn__icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <nav class="footer-col" aria-labelledby="f-pages">
+          <h2 class="footer-col__title" id="f-pages">Pages</h2>
+          <ul class="footer-col__list">
+            <li><a href="/en/">Home</a></li>
+            <li><a href="/en/menu/">Menu</a></li>
+            <li><a href="/en/branches/">Branches</a></li>
+            <li><a href="/en/#rewards">Rewards</a></li>
+            <li><a href="/en/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <h2 class="footer-col__title" id="f-contact">Contact</h2>
+          <ul class="footer-col__list">
+            <li><a href="/en/contact/">Contact us</a></li>
+            <!-- TODO: phone (tel:) / email (mailto:) once supplied — no dummy values -->
+          </ul>
+          <!-- TODO: official social URLs pending client -->
+          <ul class="social-list">
+            <li><a class="is-pending" aria-disabled="true" data-pending="instagram-url" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+            <li><a class="is-pending" aria-disabled="true" data-pending="tiktok-url" aria-label="TikTok"><svg aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+            <li><a class="is-pending" aria-disabled="true" data-pending="facebook-url" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          </ul>
+        </div>
+        <div class="site-footer__brand">
+          <a href="/en/" aria-label="Moon Café — Home"><img src="/assets/images/brand/logo.png" alt="Moon Café" width="313" height="352" loading="lazy"></a>
+        </div>
+      </div>
+      <p class="site-footer__copy">© <span data-year>2026</span> Moon Café. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

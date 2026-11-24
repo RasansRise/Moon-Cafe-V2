@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Moon Café — layout.css
+   Containers, section rhythm, shared page scaffolding.
+   ========================================================================== */
+
+.container {
+  width: min(100% - (var(--gutter) * 2), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-y);
+}
+
+.section-head {
+  display: grid;
+  gap: 10px;
+}
+.section-head--split {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+}
+.section-head--center { justify-items: center; text-align: center; }
+
+.eyebrow {
+  font-size: var(--fs-eyebrow);
+  font-weight: 700;
+  color: var(--brand-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.38em;
+  line-height: 1.2;
+}
+:root[lang="ar"] .eyebrow {
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: calc(var(--fs-eyebrow) * 1.2);
+}
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: 16px;
+  top: -100px;
+  z-index: 200;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--brand-gold);
+  color: var(--text-on-gold);
+  font-weight: 700;
+}
+.skip-link:focus { top: 12px; }
+
+main { display: block; }
+
+@media (max-width: 759px) {
+  .section-head--split {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 759px) {
+  .section-head--split > .btn { justify-self: start; }
+}

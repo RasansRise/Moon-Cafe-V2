@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Moon Café — base.css
+   Reset, brand tokens, font faces, base typography, RTL/LTR foundations.
+   Brand values: Moon Café Brand Manual p.13 (colours) and p.14 (type).
+   ========================================================================== */
+
+/* ---- Brand fonts ---------------------------------------------------------
+   Proxima Nova (EN) and Helvetica Neue Arabic (AR) are the brand families.
+   Licensed webfont files have NOT been supplied yet (design.md §2.2, R-07).
+   `local()` uses an installed copy if present. When licensed .woff2 files are
+   delivered, put them in /assets/fonts/ and uncomment the url() sources.
+   ------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Proxima Nova Light"), local("ProximaNova-Light")
+    /* , url("/assets/fonts/ProximaNova-Light.woff2") format("woff2") */;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Proxima Nova Regular"), local("ProximaNova-Regular")
+    /* , url("/assets/fonts/ProximaNova-Regular.woff2") format("woff2") */;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Proxima Nova Bold"), local("ProximaNova-Bold")
+    /* , url("/assets/fonts/ProximaNova-Bold.woff2") format("woff2") */;
+}
+@font-face {
+  font-family: "Helvetica Neue Arabic";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Helvetica Neue Arabic Light"), local("HelveticaNeueLTArabic-Light")
+    /* , url("/assets/fonts/HelveticaNeueArabic-Light.woff2") format("woff2") */;
+}
+@font-face {
+  font-family: "Helvetica Neue Arabic";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Helvetica Neue Arabic Roman"), local("HelveticaNeueLTArabic-Roman")
+    /* , url("/assets/fonts/HelveticaNeueArabic-Roman.woff2") format("woff2") */;
+}
+@font-face {
+  font-family: "Helvetica Neue Arabic";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Helvetica Neue Arabic Bold"), local("HelveticaNeueLTArabic-Bold")
+    /* , url("/assets/fonts/HelveticaNeueArabic-Bold.woff2") format("woff2") */;
+}
+
+/* ---- Tokens -------------------------------------------------------------- */
+:root {
+  /* [BRAND] Brand Manual p.13 */
+  --brand-gold: #daaf67;
+  --brand-gold-light: #fed899;
+  --brand-cream: #ffe7c2;
+  --brand-black: #000; /* TODO: replace with the manual's approved black swatch value */
+  --brand-white: #fff; /* TODO: replace with the manual's approved white swatch value */
+
+  /* [PROPOSED] semantic tokens — derived only from brand black/white/golds */
+  --surface-base: #080504;              /* near brand black, as in the approved mockup */
+  --surface-elevated: rgb(255 255 255 / 0.03);
+  --surface-contrast: var(--brand-cream);
+  --text-primary: var(--brand-cream);
+  --text-strong: #fff3df;
+  --text-body: rgb(255 255 255 / 0.86);
+  --text-muted: rgb(255 255 255 / 0.62);
+  --text-on-gold: #120c07;
+  --border-subtle: rgb(255 255 255 / 0.14);
+  --border-soft: rgb(255 255 255 / 0.1);
+  --focus-ring: var(--brand-gold-light);
+
+  /* Typography */
+  --font-en: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-ar: "Helvetica Neue Arabic", "Geeza Pro", "Segoe UI", Tahoma, "Noto Sans Arabic", Arial, sans-serif;
+  --font-base: var(--font-en);
+
+  --fs-display: clamp(2.6rem, 6.6vw, 5.25rem);
+  --fs-h2: clamp(1.9rem, 4.1vw, 2.9rem);
+  --fs-h2-lg: clamp(2.1rem, 5.2vw, 3.75rem);
+  --fs-statement: clamp(1.3rem, 3.1vw, 2.2rem);
+  --fs-body: clamp(1rem, 1.2vw, 1.0625rem);
+  --fs-small: 0.875rem;
+  --fs-xs: 0.78rem;
+  --fs-eyebrow: clamp(0.72rem, 1vw, 0.85rem);
+
+  /* Layout — design.md §9 (PROPOSED) */
+  --container: 1240px;
+  --gutter: clamp(16px, 5.5vw, 80px);
+  --section-y: clamp(64px, 9vw, 112px);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-pill: 999px;
+  --header-h: clamp(72px, 6.4vw, 96px);
+  --header-h-compact: 68px;
+
+  /* Motion — design.md §7 (PROPOSED) */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 180ms;
+  --dur-med: 280ms;
+  --dur-reveal: 600ms;
+}
+
+:root[lang="ar"] {
+  --font-base: var(--font-ar);
+}
+
+/* ---- Reset --------------------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h-compact) + 16px);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--surface-base);
+  color: var(--text-body);
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+:root[lang="ar"] body { line-height: 1.75; }
+
+img,
+svg,
+picture { display: block; max-width: 100%; }
+img { height: auto; }
+
+h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+ul[role="list"], ol[role="list"] { list-style: none; padding: 0; }
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Heading voice from the approved mockup: bold, uppercase, tight leading.
+   Arabic does not use uppercase/tracking (design.md §2.2). */
+.display,
+.heading {
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  line-height: 0.98;
+  letter-spacing: -0.005em;
+}
+:root[lang="ar"] .display,
+:root[lang="ar"] .heading {
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+[hidden] { display: none !important; }

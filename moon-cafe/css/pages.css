@@ -1,0 +1,326 @@
+/* ==========================================================================
+   Moon Café — pages.css
+   Page-specific selectors. Home: Hero → About → Featured Menu → Branches
+   Preview → Rewards (design.md §4.2). Proportions follow the approved desktop
+   mockup (941px reference width, scaled with vw and capped).
+   ========================================================================== */
+
+/* ---- Home: Hero ---------------------------------------------------------- */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  padding-top: var(--header-h);
+  isolation: isolate;
+}
+.hero > .container { align-self: center; padding-block: clamp(16px, 3vh, 40px); }
+.hero::before { /* soft warm glow behind the cups */
+  content: "";
+  position: absolute;
+  inset: 30% 10% -20%;
+  z-index: -1;
+  background: radial-gradient(50% 55% at 50% 60%, rgb(218 175 103 / 0.07), transparent 70%);
+  pointer-events: none;
+}
+.hero__content {
+  display: grid;
+  justify-items: center;
+  gap: clamp(12px, 1.6vw, 20px);
+  text-align: center;
+}
+.hero__eyebrow {
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  font-weight: 700;
+  color: var(--brand-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.42em;
+}
+:root[lang="ar"] .hero__eyebrow { font-size: clamp(1rem, 1.3vw, 1.2rem); letter-spacing: 0; text-transform: none; }
+.hero__sub {
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  color: var(--text-body);
+  letter-spacing: 0.06em;
+}
+:root[lang="ar"] .hero__sub { letter-spacing: 0; }
+.hero__cta { margin-top: clamp(4px, 0.8vw, 10px); }
+.hero__title {
+  max-width: 15em;
+  font-size: clamp(2.1rem, 4.8vw, 4.4rem);
+  text-wrap: balance;
+  text-align: center;
+  color: var(--text-primary);
+  text-shadow: 0 2px 30px rgb(0 0 0 / 0.5);
+}
+.hero__title span { display: block; }
+
+.hero__stage {
+  position: relative;
+  /* Fills the remaining viewport height on every screen while keeping all three
+     cups inside the viewport (cups span ~46% of the stage width). */
+  --stage-h: calc(100svh - var(--header-h));
+  width: min(200vw, max(100vw, calc(var(--stage-h) * 2)));
+  align-self: end;
+  left: 50%;
+  transform: translateX(-50%);
+  aspect-ratio: 941 / 171;
+}
+:root[dir="rtl"] .hero__stage { left: auto; right: 50%; transform: translateX(50%); }
+
+.hero__ribbon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.ribbon-band { fill: none; stroke: #1d120b; stroke-width: 23; stroke-linecap: butt; }
+.ribbon-edge { fill: none; stroke: rgb(218 175 103 / 0.42); stroke-width: 25; }
+.ribbon-text {
+  font-family: var(--font-en);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  fill: var(--text-strong);
+}
+:root[lang="ar"] .ribbon-text { font-family: var(--font-ar); font-size: 10.5px; letter-spacing: 0; }
+
+.hero__cup {
+  position: absolute;
+  height: auto;
+  will-change: transform;
+  filter: drop-shadow(0 14px 24px rgb(0 0 0 / 0.55));
+}
+/* % positions measured from the mockup (stage = 941 × 171) */
+.hero__cup--left   { left: 27%;   top: 9.4%; width: 13.5%; }
+.hero__cup--center { left: 41.1%; top: 2.3%; width: 18.8%; z-index: 2; }
+.hero__cup--right  { left: 59.2%; top: 9.9%; width: 14.3%; }
+
+
+/* ---- Home: About --------------------------------------------------------- */
+.about {
+  padding-top: clamp(28px, 3.4vw, 48px);
+  padding-bottom: 0;
+  text-align: center;
+}
+.about__eyebrow { margin-bottom: clamp(10px, 1.2vw, 16px); }
+.about__statement {
+  max-width: 18em;
+  margin-inline: auto;
+  font-size: clamp(1.35rem, 2.65vw, 2.4rem);
+  line-height: 1.38;
+  text-wrap: balance;
+}
+.about__pill {
+  display: inline-block;
+  height: 0.98em;
+  width: auto;
+  vertical-align: -0.12em;
+  border-radius: var(--radius-pill);
+  object-fit: cover;
+}
+.about__pill--bean { aspect-ratio: 65 / 24; }
+.about__pill--cups { aspect-ratio: 84 / 24; }
+:root[lang="ar"] .about__statement { line-height: 1.75; }
+/* Inline images: each keeps its full width in the line (no text reflow) and
+   grows open from the centre when the statement scrolls into view. */
+.about__pill--bean { width: 2.65em; }
+.about__pill--cups { width: 3.43em; }
+.js [data-grow] .about__pill {
+  clip-path: inset(0 50% round 999px);
+  transform: scale(0.6);
+  opacity: 0;
+  transition: clip-path 900ms cubic-bezier(0.65, 0, 0.35, 1), transform 900ms cubic-bezier(0.65, 0, 0.35, 1), opacity 400ms ease;
+}
+.js [data-grow] .about__pill--bean { transition-delay: 250ms; }
+.js [data-grow] .about__pill--cups { transition-delay: 550ms; }
+.js [data-grow].is-visible .about__pill {
+  clip-path: inset(0 0 round 999px);
+  transform: none;
+  opacity: 1;
+}
+
+.about__visual {
+  width: clamp(280px, 32vw, 480px);
+  margin: clamp(4px, 1vw, 12px) auto 0;
+}
+
+/* ---- Home: Featured menu carousel --------------------------------------- */
+.featured { padding-top: clamp(8px, 1vw, 16px); padding-bottom: clamp(28px, 3vw, 44px); }
+.featured .section-head h2 { font-size: var(--fs-h2); }
+
+.carousel {
+  position: relative;
+  margin-top: clamp(18px, 2.2vw, 30px);
+}
+.carousel__viewport {
+  overflow: hidden;
+  touch-action: pan-y;
+}
+.carousel__track {
+  --per-view: 4;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  will-change: transform;
+}
+.carousel__slide {
+  position: relative;
+  flex: 0 0 calc(100% / var(--per-view));
+  min-width: 0;
+}
+.carousel__slide::before { /* neutral column divider */
+  content: "";
+  position: absolute;
+  inset-block: 2px;
+  inset-inline-start: -1px;
+  width: 1px;
+  background: var(--border-subtle);
+}
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: clamp(36px, 3.4vw, 46px);
+  aspect-ratio: 1;
+  border: 1.5px solid var(--brand-gold);
+  border-radius: 50%;
+  color: var(--brand-gold);
+  background: rgb(8 5 4 / 0.6);
+  transform: translateY(-50%);
+  transition: background-color var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+.carousel__arrow:hover { background: var(--brand-gold); color: var(--text-on-gold); }
+.carousel__arrow svg { width: 50%; height: 50%; }
+.carousel__arrow--prev { inset-inline-start: calc(-1 * clamp(44px, 5vw, 72px)); }
+.carousel__arrow--next { inset-inline-end: calc(-1 * clamp(44px, 5vw, 72px)); }
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: clamp(16px, 2vw, 26px);
+}
+.carousel__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid rgb(255 231 194 / 0.7);
+  transition: background-color var(--dur-fast) ease, border-color var(--dur-fast) ease;
+}
+.carousel__dot[aria-current="true"] { background: var(--brand-gold); border-color: var(--brand-gold); }
+/* hit-area padding without changing visual size */
+.carousel__dot { position: relative; }
+.carousel__dot::after { content: ""; position: absolute; inset: -10px; }
+
+.featured .product-card__media { aspect-ratio: 1.75 / 1; }
+.featured .price-row { flex-wrap: nowrap; }
+@media (max-width: 1279px) { .featured .price-row { flex-wrap: wrap; } }
+/* Placeholder crops sit on near-black; lighten blends their backdrop into the page */
+.product-card__media img,
+.about__visual,
+.rewards__cup { mix-blend-mode: lighten; }
+
+/* ---- Home: Branches preview --------------------------------------------- */
+.branches-preview { padding-top: clamp(14px, 1.6vw, 22px); padding-bottom: clamp(28px, 3vw, 44px); }
+.branches-preview .section-head h2 { font-size: var(--fs-h2); }
+.branches-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 2.4vw, 34px);
+  margin-top: clamp(14px, 1.6vw, 22px);
+  list-style: none;
+  padding: 0;
+}
+.branches-preview__more {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(18px, 2vw, 28px);
+}
+
+/* ---- Home: Rewards (full screen, scroll-driven) ----------------------- */
+.rewards { position: relative; }
+.rewards__pin {
+  background: var(--surface-base); /* backdrop for the cup's lighten blend */
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-block: calc(var(--header-h-compact) + 12px) 28px;
+}
+.rewards__title { font-size: var(--fs-h2-lg); }
+.rewards__title .gold { display: block; color: var(--brand-gold); }
+.rewards__layout {
+  display: grid;
+  grid-template-columns: 1fr clamp(190px, 23vw, 340px) 1fr;
+  align-items: center;
+  gap: clamp(16px, 4vw, 64px);
+  margin-top: clamp(8px, 1.4vw, 20px);
+}
+.rewards__col { display: grid; gap: clamp(12px, 1.4vw, 20px); list-style: none; margin: 0; padding: 0; }
+.rewards__cup { width: 100%; will-change: transform; }
+.rewards__cta { display: flex; justify-content: center; margin-top: clamp(16px, 1.8vw, 26px); }
+
+/* Pinned mode (added by JS when motion is allowed and the screen is tall enough) */
+.rewards.is-pinned { height: 340vh; height: 340svh; }
+.rewards.is-pinned .rewards__pin { position: sticky; top: 0; height: 100vh; height: 100svh; }
+.rewards.is-pinned [data-step] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 500ms ease, transform 700ms var(--ease-out);
+}
+.rewards.is-pinned .rewards__col--start [data-step] { transform: translateX(-48px); }
+.rewards.is-pinned .rewards__col--end [data-step] { transform: translateX(48px); }
+:root[dir="rtl"] .rewards.is-pinned .rewards__col--start [data-step] { transform: translateX(48px); }
+:root[dir="rtl"] .rewards.is-pinned .rewards__col--end [data-step] { transform: translateX(-48px); }
+.rewards.is-pinned [data-step].is-on { opacity: 1; transform: none !important; }
+
+/* ---- Home: responsive ---------------------------------------------------- */
+@media (max-width: 1099px) {
+  .carousel__track { --per-view: 3; }
+}
+@media (max-width: 999px) {
+  .hero { padding-top: var(--header-h-compact); }
+  .hero__stage { --stage-h: calc(100svh - var(--header-h-compact)); }
+}
+@media (max-width: 899px) {
+  .rewards__layout { grid-template-columns: 1fr 1fr; }
+  .rewards__cup-wrap { grid-column: 1 / -1; grid-row: 1; justify-self: center; width: 185px; }
+  .rewards.is-pinned .rewards__col--start [data-step],
+  .rewards.is-pinned .rewards__col--end [data-step],
+  :root[dir="rtl"] .rewards.is-pinned .rewards__col [data-step] { transform: translateY(28px); }
+}
+@media (max-width: 759px) {
+  .carousel__track { --per-view: 2; }
+  .carousel__arrow { top: auto; bottom: -6px; transform: none; width: 40px; }
+  .carousel__arrow--prev { inset-inline-start: 0; }
+  .carousel__arrow--next { inset-inline-end: 0; }
+  .carousel__dots { min-height: 40px; align-items: center; }
+  .branches-preview__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 559px) {
+  .carousel__track { --per-view: 1.25; }
+  .rewards__layout { grid-template-columns: 1fr; gap: 10px; }
+  .rewards__cup-wrap { width: 100px; }
+  .rewards__cta { margin-top: 12px; }
+  .rewards__pin { padding-bottom: 16px; }
+  .rewards .section-head { gap: 6px; }
+  .rewards__col { gap: 10px; }
+  .rewards .feature-card { padding: 9px 14px; gap: 14px; }
+  .rewards .feature-card__title { font-size: 0.98rem; }
+  .rewards .feature-card__icon { width: 42px; }
+  .rewards .feature-card__text { margin-top: 2px; font-size: 0.85rem; max-width: none; }
+  .rewards__title { font-size: clamp(1.6rem, 7vw, 2rem); }
+  .rewards__layout { margin-top: 4px; }
+  .about__statement { font-size: clamp(1.3rem, 6vw, 1.6rem); }
+}
+
+.hero__ribbon { direction: ltr; }
+.no-js .carousel__viewport { overflow-x: auto; scroll-snap-type: x mandatory; }
+.no-js .carousel__slide { scroll-snap-align: start; }

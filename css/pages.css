@@ -277,7 +277,7 @@
 .rewards__cta { display: flex; justify-content: center; margin-top: clamp(16px, 1.8vw, 26px); }
 
 /* Pinned mode (added by JS when motion is allowed and the screen is tall enough) */
-.rewards.is-pinned { height: 240vh; height: 240svh; }
+.rewards.is-pinned { height: 200vh; height: 200svh; }
 .rewards.is-pinned .rewards__pin { position: sticky; top: 0; height: 100vh; height: 100svh; }
 .rewards.is-pinned [data-step] {
   opacity: 0;

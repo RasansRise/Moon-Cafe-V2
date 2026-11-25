@@ -76,7 +76,7 @@ python3 -m http.server 8000
 ## Menu page (2026-11-25)
 
 - **All 75 products on one page**, with a category **dropdown** (an accessible listbox: All, then Drinks / Food groups with counts, keyboard arrows/Enter/Escape) and pagination (12 per page). The toolbar sticks under the header.
-- **Product names** come from the image file names: hyphens become spaces and each word is capitalised (`cookies-and-cream` → "Cookies And Cream"). Arabic names come from the client CSV (`name.ar` in `products.json`) and are used on the Arabic page.
+- **Product names** come from the image file names: hyphens become spaces and each word is capitalised (`cookies-and-cream` → "Cookies And Cream"). Arabic names come from the client CSV (`name.ar` in `products.json`). Products that also appear in the client's menu list (2026-11-25) use that list's exact EN + AR names, and their image files were renamed to match (for example `latte.webp` → `caffe-latte.webp`).
 - **Data**: `data/products.json` holds each product's category, name and image. Category assignment was done by hand following `menu-inventory.md`. "crush" files go under Crash, and the new items (teas, mojitos, dragées, pretzel, bag coffee maker) went to the closest category.
 - **Images**: `assets/images/products/` holds 600px webp files (about 46 KB each) for the grid, and `assets/images/products/1000/` holds the full size used via `srcset`. Images are lazy-loaded.
 - **Build**: run `python3 tools/build-menu.py` after editing `products.json` or the homepage header/footer. It writes both menu pages with every product in static HTML (crawlable, and visible without JS). `js/menu.js` adds the filters and pagination on top.

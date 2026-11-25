@@ -1,5 +1,5 @@
 {
-  "_note": "English names derived from image file names; Arabic names from client CSV (2026-11-25). Prices, calories and ingredients pending client data.",
+  "_note": "Names of products that appear in the client's menu list (2026-11-25) follow that list exactly (EN + AR); other products keep names from the image files / client CSV. Prices, calories and ingredients pending.",
   "categories": [
     {
       "id": "hot-coffee",
@@ -120,15 +120,15 @@
       "displayOrder": 5
     },
     {
-      "id": "latte",
+      "id": "caffe-latte",
       "menuGroupId": "drinks",
       "categoryId": "hot-coffee",
       "name": {
-        "en": "Latte",
-        "ar": "لاتيه"
+        "en": "Caffe Latte",
+        "ar": "كوفي لاتيه"
       },
-      "image": "/assets/images/products/latte.webp",
-      "imageLarge": "/assets/images/products/1000/latte.webp",
+      "image": "/assets/images/products/caffe-latte.webp",
+      "imageLarge": "/assets/images/products/1000/caffe-latte.webp",
       "displayOrder": 6
     },
     {
@@ -136,8 +136,8 @@
       "menuGroupId": "drinks",
       "categoryId": "hot-coffee",
       "name": {
-        "en": "Cafe Mocha",
-        "ar": "كافيه موكا"
+        "en": "Café Mocha",
+        "ar": "كوفي موكا"
       },
       "image": "/assets/images/products/cafe-mocha.webp",
       "imageLarge": "/assets/images/products/1000/cafe-mocha.webp",
@@ -161,7 +161,7 @@
       "categoryId": "hot-coffee",
       "name": {
         "en": "Caramel Macchiato",
-        "ar": "كاراميل ماكياتو"
+        "ar": "كراميل ماكياتو"
       },
       "image": "/assets/images/products/caramel-macchiato.webp",
       "imageLarge": "/assets/images/products/1000/caramel-macchiato.webp",
@@ -173,7 +173,7 @@
       "categoryId": "hot-coffee",
       "name": {
         "en": "Coffee Box",
-        "ar": "بوكس قهوة"
+        "ar": "كوفي بوكس"
       },
       "image": "/assets/images/products/coffee-box.webp",
       "imageLarge": "/assets/images/products/1000/coffee-box.webp",
@@ -185,7 +185,7 @@
       "categoryId": "hot-coffee",
       "name": {
         "en": "Bag Coffee Maker",
-        "ar": "أداة تحضير القهوة بالأكياس"
+        "ar": "دالة قهوة سعودي"
       },
       "image": "/assets/images/products/bag-coffee-maker.webp",
       "imageLarge": "/assets/images/products/1000/bag-coffee-maker.webp",
@@ -197,7 +197,7 @@
       "categoryId": "hot-coffee",
       "name": {
         "en": "Turkish Coffee",
-        "ar": "قهوة تركية"
+        "ar": "قهوة تركي"
       },
       "image": "/assets/images/products/turkish-coffee.webp",
       "imageLarge": "/assets/images/products/1000/turkish-coffee.webp",
@@ -209,7 +209,7 @@
       "categoryId": "hot-coffee",
       "name": {
         "en": "Saudi Coffee",
-        "ar": "قهوة سعودية"
+        "ar": "قهوة سعودي"
       },
       "image": "/assets/images/products/saudi-coffee.webp",
       "imageLarge": "/assets/images/products/1000/saudi-coffee.webp",
@@ -221,7 +221,7 @@
       "categoryId": "hot-coffee",
       "name": {
         "en": "American Coffee",
-        "ar": "قهوة أمريكية"
+        "ar": "قهوة أمريكي"
       },
       "image": "/assets/images/products/american-coffee.webp",
       "imageLarge": "/assets/images/products/1000/american-coffee.webp",
@@ -233,7 +233,7 @@
       "categoryId": "hot-coffee",
       "name": {
         "en": "French Coffee",
-        "ar": "قهوة فرنسية"
+        "ar": "قهوة فرنسي"
       },
       "image": "/assets/images/products/french-coffee.webp",
       "imageLarge": "/assets/images/products/1000/french-coffee.webp",
@@ -245,7 +245,7 @@
       "categoryId": "hot-coffee",
       "name": {
         "en": "Italiano",
-        "ar": "إيتاليانو"
+        "ar": "إيطاليانو"
       },
       "image": "/assets/images/products/italiano.webp",
       "imageLarge": "/assets/images/products/1000/italiano.webp",
@@ -256,7 +256,7 @@
       "menuGroupId": "drinks",
       "categoryId": "hot-drinks",
       "name": {
-        "en": "Cookies And Cream",
+        "en": "Cookies and Cream",
         "ar": "كوكيز آند كريم"
       },
       "image": "/assets/images/products/cookies-and-cream.webp",
@@ -269,7 +269,7 @@
       "categoryId": "hot-drinks",
       "name": {
         "en": "Red Velvet",
-        "ar": "ريد فلفيت"
+        "ar": "ريد فيلفيت"
       },
       "image": "/assets/images/products/red-velvet.webp",
       "imageLarge": "/assets/images/products/1000/red-velvet.webp",
@@ -281,7 +281,7 @@
       "categoryId": "hot-drinks",
       "name": {
         "en": "French Mocha",
-        "ar": "موكا فرنسية"
+        "ar": "موكا فرنسي"
       },
       "image": "/assets/images/products/french-mocha.webp",
       "imageLarge": "/assets/images/products/1000/french-mocha.webp",
@@ -293,7 +293,7 @@
       "categoryId": "hot-drinks",
       "name": {
         "en": "French Toffee",
-        "ar": "فرنش توفي"
+        "ar": "توفي فرنسي"
       },
       "image": "/assets/images/products/french-toffee.webp",
       "imageLarge": "/assets/images/products/1000/french-toffee.webp",
@@ -317,22 +317,22 @@
       "categoryId": "hot-drinks",
       "name": {
         "en": "Hot Chocolate",
-        "ar": "هوت شوكليت"
+        "ar": "شوكولاتة ساخنة"
       },
       "image": "/assets/images/products/hot-chocolate.webp",
       "imageLarge": "/assets/images/products/1000/hot-chocolate.webp",
       "displayOrder": 6
     },
     {
-      "id": "steamed-milk",
+      "id": "steam-milk",
       "menuGroupId": "drinks",
       "categoryId": "hot-drinks",
       "name": {
-        "en": "Steamed Milk",
-        "ar": "حليب مبخر"
+        "en": "Steam Milk",
+        "ar": "حليب بالبخار"
       },
-      "image": "/assets/images/products/steamed-milk.webp",
-      "imageLarge": "/assets/images/products/1000/steamed-milk.webp",
+      "image": "/assets/images/products/steam-milk.webp",
+      "imageLarge": "/assets/images/products/1000/steam-milk.webp",
       "displayOrder": 7
     },
     {
@@ -341,7 +341,7 @@
       "categoryId": "hot-drinks",
       "name": {
         "en": "Ginger Milk",
-        "ar": "حليب بالزنجبيل"
+        "ar": "حليب زنجبيل"
       },
       "image": "/assets/images/products/ginger-milk.webp",
       "imageLarge": "/assets/images/products/1000/ginger-milk.webp",
@@ -425,7 +425,7 @@
       "categoryId": "iced-coffee",
       "name": {
         "en": "Iced Caramel Macchiato",
-        "ar": "آيس كاراميل ماكياتو"
+        "ar": "آيس كراميل ماكياتو"
       },
       "image": "/assets/images/products/iced-caramel-macchiato.webp",
       "imageLarge": "/assets/images/products/1000/iced-caramel-macchiato.webp",
@@ -437,7 +437,7 @@
       "categoryId": "iced-coffee",
       "name": {
         "en": "Spanish Latte",
-        "ar": "سبانيش لاتيه"
+        "ar": "سبانش لاتيه"
       },
       "image": "/assets/images/products/spanish-latte.webp",
       "imageLarge": "/assets/images/products/1000/spanish-latte.webp",
@@ -456,39 +456,39 @@
       "displayOrder": 4
     },
     {
-      "id": "red-velvet-crush",
+      "id": "red-velvet-crash",
       "menuGroupId": "drinks",
       "categoryId": "crash",
       "name": {
-        "en": "Red Velvet Crush",
-        "ar": "ريد فلفيت كراش"
+        "en": "Red Velvet Crash",
+        "ar": "ريد فيلفيت كراش"
       },
-      "image": "/assets/images/products/red-velvet-crush.webp",
-      "imageLarge": "/assets/images/products/1000/red-velvet-crush.webp",
+      "image": "/assets/images/products/red-velvet-crash.webp",
+      "imageLarge": "/assets/images/products/1000/red-velvet-crash.webp",
       "displayOrder": 1
     },
     {
-      "id": "toffee-crush",
+      "id": "toffee-crash",
       "menuGroupId": "drinks",
       "categoryId": "crash",
       "name": {
-        "en": "Toffee Crush",
+        "en": "Toffee Crash",
         "ar": "توفي كراش"
       },
-      "image": "/assets/images/products/toffee-crush.webp",
-      "imageLarge": "/assets/images/products/1000/toffee-crush.webp",
+      "image": "/assets/images/products/toffee-crash.webp",
+      "imageLarge": "/assets/images/products/1000/toffee-crash.webp",
       "displayOrder": 2
     },
     {
-      "id": "mocha-crush",
+      "id": "mocha-crash",
       "menuGroupId": "drinks",
       "categoryId": "crash",
       "name": {
-        "en": "Mocha Crush",
+        "en": "Mocha Crash",
         "ar": "موكا كراش"
       },
-      "image": "/assets/images/products/mocha-crush.webp",
-      "imageLarge": "/assets/images/products/1000/mocha-crush.webp",
+      "image": "/assets/images/products/mocha-crash.webp",
+      "imageLarge": "/assets/images/products/1000/mocha-crash.webp",
       "displayOrder": 3
     },
     {
@@ -605,7 +605,7 @@
       "categoryId": "bakery-desserts",
       "name": {
         "en": "Vanilla Muffin",
-        "ar": "مافن فانيلا"
+        "ar": "مافن فانيليا"
       },
       "image": "/assets/images/products/vanilla-muffin.webp",
       "imageLarge": "/assets/images/products/1000/vanilla-muffin.webp",
@@ -629,7 +629,7 @@
       "categoryId": "bakery-desserts",
       "name": {
         "en": "Vanilla Cookies",
-        "ar": "كوكيز فانيلا"
+        "ar": "كوكيز فانيليا"
       },
       "image": "/assets/images/products/vanilla-cookies.webp",
       "imageLarge": "/assets/images/products/1000/vanilla-cookies.webp",
@@ -672,27 +672,27 @@
       "displayOrder": 7
     },
     {
-      "id": "chocolate-english-cake",
+      "id": "english-cake-chocolate",
       "menuGroupId": "food",
       "categoryId": "bakery-desserts",
       "name": {
-        "en": "Chocolate English Cake",
-        "ar": "إنجلش كيك بالشوكولاتة"
+        "en": "English Cake Chocolate",
+        "ar": "إنجليش كيك شوكولاتة"
       },
-      "image": "/assets/images/products/chocolate-english-cake.webp",
-      "imageLarge": "/assets/images/products/1000/chocolate-english-cake.webp",
+      "image": "/assets/images/products/english-cake-chocolate.webp",
+      "imageLarge": "/assets/images/products/1000/english-cake-chocolate.webp",
       "displayOrder": 8
     },
     {
-      "id": "marble-english-cake",
+      "id": "english-cake-marble",
       "menuGroupId": "food",
       "categoryId": "bakery-desserts",
       "name": {
-        "en": "Marble English Cake",
-        "ar": "إنجلش كيك ماربل"
+        "en": "English Cake Marble",
+        "ar": "إنجليش كيك ماربل"
       },
-      "image": "/assets/images/products/marble-english-cake.webp",
-      "imageLarge": "/assets/images/products/1000/marble-english-cake.webp",
+      "image": "/assets/images/products/english-cake-marble.webp",
+      "imageLarge": "/assets/images/products/1000/english-cake-marble.webp",
       "displayOrder": 9
     },
     {
@@ -720,15 +720,15 @@
       "displayOrder": 11
     },
     {
-      "id": "waffle",
+      "id": "vanilla-waffle",
       "menuGroupId": "food",
       "categoryId": "bakery-desserts",
       "name": {
-        "en": "Waffle",
-        "ar": "وافل"
+        "en": "Vanilla Waffle",
+        "ar": "وافل فانيليا"
       },
-      "image": "/assets/images/products/waffle.webp",
-      "imageLarge": "/assets/images/products/1000/waffle.webp",
+      "image": "/assets/images/products/vanilla-waffle.webp",
+      "imageLarge": "/assets/images/products/1000/vanilla-waffle.webp",
       "displayOrder": 12
     },
     {
@@ -744,27 +744,27 @@
       "displayOrder": 13
     },
     {
-      "id": "long-chocolate-donut",
+      "id": "chocolate-donut-long",
       "menuGroupId": "food",
       "categoryId": "bakery-desserts",
       "name": {
-        "en": "Long Chocolate Donut",
+        "en": "Chocolate Donut Long",
         "ar": "دونات شوكولاتة طويلة"
       },
-      "image": "/assets/images/products/long-chocolate-donut.webp",
-      "imageLarge": "/assets/images/products/1000/long-chocolate-donut.webp",
+      "image": "/assets/images/products/chocolate-donut-long.webp",
+      "imageLarge": "/assets/images/products/1000/chocolate-donut-long.webp",
       "displayOrder": 14
     },
     {
-      "id": "round-chocolate-donut",
+      "id": "chocolate-donut-ring",
       "menuGroupId": "food",
       "categoryId": "bakery-desserts",
       "name": {
-        "en": "Round Chocolate Donut",
+        "en": "Chocolate Donut Ring",
         "ar": "دونات شوكولاتة دائرية"
       },
-      "image": "/assets/images/products/round-chocolate-donut.webp",
-      "imageLarge": "/assets/images/products/1000/round-chocolate-donut.webp",
+      "image": "/assets/images/products/chocolate-donut-ring.webp",
+      "imageLarge": "/assets/images/products/1000/chocolate-donut-ring.webp",
       "displayOrder": 15
     },
     {
@@ -780,39 +780,39 @@
       "displayOrder": 16
     },
     {
-      "id": "chicken-fajita-sandwich",
+      "id": "fajita",
       "menuGroupId": "food",
       "categoryId": "sandwiches-croissants",
       "name": {
-        "en": "Chicken Fajita Sandwich",
-        "ar": "ساندويتش دجاج فاهيتا"
+        "en": "Fajita",
+        "ar": "ساندوتش فاهيتا"
       },
-      "image": "/assets/images/products/chicken-fajita-sandwich.webp",
-      "imageLarge": "/assets/images/products/1000/chicken-fajita-sandwich.webp",
+      "image": "/assets/images/products/fajita.webp",
+      "imageLarge": "/assets/images/products/1000/fajita.webp",
       "displayOrder": 1
     },
     {
-      "id": "ranch-chicken-sandwich",
+      "id": "chicken-ranch",
       "menuGroupId": "food",
       "categoryId": "sandwiches-croissants",
       "name": {
-        "en": "Ranch Chicken Sandwich",
-        "ar": "ساندويتش دجاج رانش"
+        "en": "Chicken Ranch",
+        "ar": "ساندوتش تشيكن رانش"
       },
-      "image": "/assets/images/products/ranch-chicken-sandwich.webp",
-      "imageLarge": "/assets/images/products/1000/ranch-chicken-sandwich.webp",
+      "image": "/assets/images/products/chicken-ranch.webp",
+      "imageLarge": "/assets/images/products/1000/chicken-ranch.webp",
       "displayOrder": 2
     },
     {
-      "id": "three-cheese-sandwich",
+      "id": "triple-cheese",
       "menuGroupId": "food",
       "categoryId": "sandwiches-croissants",
       "name": {
-        "en": "Three Cheese Sandwich",
-        "ar": "ساندويتش ثلاثة أجبان"
+        "en": "Triple Cheese",
+        "ar": "ساندوتش تريبل تشيز"
       },
-      "image": "/assets/images/products/three-cheese-sandwich.webp",
-      "imageLarge": "/assets/images/products/1000/three-cheese-sandwich.webp",
+      "image": "/assets/images/products/triple-cheese.webp",
+      "imageLarge": "/assets/images/products/1000/triple-cheese.webp",
       "displayOrder": 3
     },
     {
@@ -893,7 +893,7 @@
       "categoryId": "sandwiches-croissants",
       "name": {
         "en": "Cheese Croissant",
-        "ar": "كرواسون جبن"
+        "ar": "كرواسون جبنة"
       },
       "image": "/assets/images/products/cheese-croissant.webp",
       "imageLarge": "/assets/images/products/1000/cheese-croissant.webp",

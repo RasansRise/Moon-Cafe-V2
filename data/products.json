@@ -1,0 +1,963 @@
+{
+  "_note": "English names derived from image file names; Arabic names from client CSV (2026-11-25). Prices, calories and ingredients pending client data.",
+  "categories": [
+    {
+      "id": "hot-coffee",
+      "name": {
+        "ar": "القهوة الساخنة",
+        "en": "Hot Coffee"
+      }
+    },
+    {
+      "id": "hot-drinks",
+      "name": {
+        "ar": "المشروبات الساخنة",
+        "en": "Hot Drinks"
+      }
+    },
+    {
+      "id": "iced-coffee",
+      "name": {
+        "ar": "القهوة الباردة",
+        "en": "Iced Coffee"
+      }
+    },
+    {
+      "id": "crash",
+      "name": {
+        "ar": "الكراش",
+        "en": "Crash"
+      }
+    },
+    {
+      "id": "refreshing-drinks",
+      "name": {
+        "ar": "المشروبات المنعشة",
+        "en": "Refreshing Drinks"
+      }
+    },
+    {
+      "id": "bakery-desserts",
+      "name": {
+        "ar": "المخبوزات والحلويات",
+        "en": "Bakery & Desserts"
+      }
+    },
+    {
+      "id": "sandwiches-croissants",
+      "name": {
+        "ar": "الساندوتشات والكرواسون",
+        "en": "Sandwiches & Croissants"
+      }
+    },
+    {
+      "id": "snacks",
+      "name": {
+        "ar": "السناكس",
+        "en": "Snacks"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "espresso",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Espresso",
+        "ar": "إسبريسو"
+      },
+      "image": "/assets/images/products/espresso.webp",
+      "imageLarge": "/assets/images/products/1000/espresso.webp",
+      "displayOrder": 1
+    },
+    {
+      "id": "macchiato",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Macchiato",
+        "ar": "ماكياتو"
+      },
+      "image": "/assets/images/products/macchiato.webp",
+      "imageLarge": "/assets/images/products/1000/macchiato.webp",
+      "displayOrder": 2
+    },
+    {
+      "id": "cortado",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Cortado",
+        "ar": "كورتادو"
+      },
+      "image": "/assets/images/products/cortado.webp",
+      "imageLarge": "/assets/images/products/1000/cortado.webp",
+      "displayOrder": 3
+    },
+    {
+      "id": "flat-white",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Flat White",
+        "ar": "فلات وايت"
+      },
+      "image": "/assets/images/products/flat-white.webp",
+      "imageLarge": "/assets/images/products/1000/flat-white.webp",
+      "displayOrder": 4
+    },
+    {
+      "id": "cappuccino",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Cappuccino",
+        "ar": "كابتشينو"
+      },
+      "image": "/assets/images/products/cappuccino.webp",
+      "imageLarge": "/assets/images/products/1000/cappuccino.webp",
+      "displayOrder": 5
+    },
+    {
+      "id": "latte",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Latte",
+        "ar": "لاتيه"
+      },
+      "image": "/assets/images/products/latte.webp",
+      "imageLarge": "/assets/images/products/1000/latte.webp",
+      "displayOrder": 6
+    },
+    {
+      "id": "cafe-mocha",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Cafe Mocha",
+        "ar": "كافيه موكا"
+      },
+      "image": "/assets/images/products/cafe-mocha.webp",
+      "imageLarge": "/assets/images/products/1000/cafe-mocha.webp",
+      "displayOrder": 7
+    },
+    {
+      "id": "white-mocha",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "White Mocha",
+        "ar": "وايت موكا"
+      },
+      "image": "/assets/images/products/white-mocha.webp",
+      "imageLarge": "/assets/images/products/1000/white-mocha.webp",
+      "displayOrder": 8
+    },
+    {
+      "id": "caramel-macchiato",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Caramel Macchiato",
+        "ar": "كاراميل ماكياتو"
+      },
+      "image": "/assets/images/products/caramel-macchiato.webp",
+      "imageLarge": "/assets/images/products/1000/caramel-macchiato.webp",
+      "displayOrder": 9
+    },
+    {
+      "id": "coffee-box",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Coffee Box",
+        "ar": "بوكس قهوة"
+      },
+      "image": "/assets/images/products/coffee-box.webp",
+      "imageLarge": "/assets/images/products/1000/coffee-box.webp",
+      "displayOrder": 10
+    },
+    {
+      "id": "bag-coffee-maker",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Bag Coffee Maker",
+        "ar": "أداة تحضير القهوة بالأكياس"
+      },
+      "image": "/assets/images/products/bag-coffee-maker.webp",
+      "imageLarge": "/assets/images/products/1000/bag-coffee-maker.webp",
+      "displayOrder": 11
+    },
+    {
+      "id": "turkish-coffee",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Turkish Coffee",
+        "ar": "قهوة تركية"
+      },
+      "image": "/assets/images/products/turkish-coffee.webp",
+      "imageLarge": "/assets/images/products/1000/turkish-coffee.webp",
+      "displayOrder": 12
+    },
+    {
+      "id": "saudi-coffee",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Saudi Coffee",
+        "ar": "قهوة سعودية"
+      },
+      "image": "/assets/images/products/saudi-coffee.webp",
+      "imageLarge": "/assets/images/products/1000/saudi-coffee.webp",
+      "displayOrder": 13
+    },
+    {
+      "id": "american-coffee",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "American Coffee",
+        "ar": "قهوة أمريكية"
+      },
+      "image": "/assets/images/products/american-coffee.webp",
+      "imageLarge": "/assets/images/products/1000/american-coffee.webp",
+      "displayOrder": 14
+    },
+    {
+      "id": "french-coffee",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "French Coffee",
+        "ar": "قهوة فرنسية"
+      },
+      "image": "/assets/images/products/french-coffee.webp",
+      "imageLarge": "/assets/images/products/1000/french-coffee.webp",
+      "displayOrder": 15
+    },
+    {
+      "id": "italiano",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-coffee",
+      "name": {
+        "en": "Italiano",
+        "ar": "إيتاليانو"
+      },
+      "image": "/assets/images/products/italiano.webp",
+      "imageLarge": "/assets/images/products/1000/italiano.webp",
+      "displayOrder": 16
+    },
+    {
+      "id": "cookies-and-cream",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "Cookies And Cream",
+        "ar": "كوكيز آند كريم"
+      },
+      "image": "/assets/images/products/cookies-and-cream.webp",
+      "imageLarge": "/assets/images/products/1000/cookies-and-cream.webp",
+      "displayOrder": 1
+    },
+    {
+      "id": "red-velvet",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "Red Velvet",
+        "ar": "ريد فلفيت"
+      },
+      "image": "/assets/images/products/red-velvet.webp",
+      "imageLarge": "/assets/images/products/1000/red-velvet.webp",
+      "displayOrder": 2
+    },
+    {
+      "id": "french-mocha",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "French Mocha",
+        "ar": "موكا فرنسية"
+      },
+      "image": "/assets/images/products/french-mocha.webp",
+      "imageLarge": "/assets/images/products/1000/french-mocha.webp",
+      "displayOrder": 3
+    },
+    {
+      "id": "french-toffee",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "French Toffee",
+        "ar": "فرنش توفي"
+      },
+      "image": "/assets/images/products/french-toffee.webp",
+      "imageLarge": "/assets/images/products/1000/french-toffee.webp",
+      "displayOrder": 4
+    },
+    {
+      "id": "nirvana",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "Nirvana",
+        "ar": "نيرفانا"
+      },
+      "image": "/assets/images/products/nirvana.webp",
+      "imageLarge": "/assets/images/products/1000/nirvana.webp",
+      "displayOrder": 5
+    },
+    {
+      "id": "hot-chocolate",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "Hot Chocolate",
+        "ar": "هوت شوكليت"
+      },
+      "image": "/assets/images/products/hot-chocolate.webp",
+      "imageLarge": "/assets/images/products/1000/hot-chocolate.webp",
+      "displayOrder": 6
+    },
+    {
+      "id": "steamed-milk",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "Steamed Milk",
+        "ar": "حليب مبخر"
+      },
+      "image": "/assets/images/products/steamed-milk.webp",
+      "imageLarge": "/assets/images/products/1000/steamed-milk.webp",
+      "displayOrder": 7
+    },
+    {
+      "id": "ginger-milk",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "Ginger Milk",
+        "ar": "حليب بالزنجبيل"
+      },
+      "image": "/assets/images/products/ginger-milk.webp",
+      "imageLarge": "/assets/images/products/1000/ginger-milk.webp",
+      "displayOrder": 8
+    },
+    {
+      "id": "karak-tea",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "Karak Tea",
+        "ar": "شاي كرك"
+      },
+      "image": "/assets/images/products/karak-tea.webp",
+      "imageLarge": "/assets/images/products/1000/karak-tea.webp",
+      "displayOrder": 9
+    },
+    {
+      "id": "english-tea",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "English Tea",
+        "ar": "شاي إنجليزي"
+      },
+      "image": "/assets/images/products/english-tea.webp",
+      "imageLarge": "/assets/images/products/1000/english-tea.webp",
+      "displayOrder": 10
+    },
+    {
+      "id": "green-tea",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "Green Tea",
+        "ar": "شاي أخضر"
+      },
+      "image": "/assets/images/products/green-tea.webp",
+      "imageLarge": "/assets/images/products/1000/green-tea.webp",
+      "displayOrder": 11
+    },
+    {
+      "id": "mint-tea",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "Mint Tea",
+        "ar": "شاي بالنعناع"
+      },
+      "image": "/assets/images/products/mint-tea.webp",
+      "imageLarge": "/assets/images/products/1000/mint-tea.webp",
+      "displayOrder": 12
+    },
+    {
+      "id": "moroccan-tea",
+      "menuGroupId": "drinks",
+      "categoryId": "hot-drinks",
+      "name": {
+        "en": "Moroccan Tea",
+        "ar": "شاي مغربي"
+      },
+      "image": "/assets/images/products/moroccan-tea.webp",
+      "imageLarge": "/assets/images/products/1000/moroccan-tea.webp",
+      "displayOrder": 13
+    },
+    {
+      "id": "iced-americano",
+      "menuGroupId": "drinks",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Iced Americano",
+        "ar": "آيس أمريكانو"
+      },
+      "image": "/assets/images/products/iced-americano.webp",
+      "imageLarge": "/assets/images/products/1000/iced-americano.webp",
+      "displayOrder": 1
+    },
+    {
+      "id": "iced-caramel-macchiato",
+      "menuGroupId": "drinks",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Iced Caramel Macchiato",
+        "ar": "آيس كاراميل ماكياتو"
+      },
+      "image": "/assets/images/products/iced-caramel-macchiato.webp",
+      "imageLarge": "/assets/images/products/1000/iced-caramel-macchiato.webp",
+      "displayOrder": 2
+    },
+    {
+      "id": "spanish-latte",
+      "menuGroupId": "drinks",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Spanish Latte",
+        "ar": "سبانيش لاتيه"
+      },
+      "image": "/assets/images/products/spanish-latte.webp",
+      "imageLarge": "/assets/images/products/1000/spanish-latte.webp",
+      "displayOrder": 3
+    },
+    {
+      "id": "iced-latte",
+      "menuGroupId": "drinks",
+      "categoryId": "iced-coffee",
+      "name": {
+        "en": "Iced Latte",
+        "ar": "آيس لاتيه"
+      },
+      "image": "/assets/images/products/iced-latte.webp",
+      "imageLarge": "/assets/images/products/1000/iced-latte.webp",
+      "displayOrder": 4
+    },
+    {
+      "id": "red-velvet-crush",
+      "menuGroupId": "drinks",
+      "categoryId": "crash",
+      "name": {
+        "en": "Red Velvet Crush",
+        "ar": "ريد فلفيت كراش"
+      },
+      "image": "/assets/images/products/red-velvet-crush.webp",
+      "imageLarge": "/assets/images/products/1000/red-velvet-crush.webp",
+      "displayOrder": 1
+    },
+    {
+      "id": "toffee-crush",
+      "menuGroupId": "drinks",
+      "categoryId": "crash",
+      "name": {
+        "en": "Toffee Crush",
+        "ar": "توفي كراش"
+      },
+      "image": "/assets/images/products/toffee-crush.webp",
+      "imageLarge": "/assets/images/products/1000/toffee-crush.webp",
+      "displayOrder": 2
+    },
+    {
+      "id": "mocha-crush",
+      "menuGroupId": "drinks",
+      "categoryId": "crash",
+      "name": {
+        "en": "Mocha Crush",
+        "ar": "موكا كراش"
+      },
+      "image": "/assets/images/products/mocha-crush.webp",
+      "imageLarge": "/assets/images/products/1000/mocha-crush.webp",
+      "displayOrder": 3
+    },
+    {
+      "id": "cookies-and-cream-crush",
+      "menuGroupId": "drinks",
+      "categoryId": "crash",
+      "name": {
+        "en": "Cookies And Cream Crush",
+        "ar": "كوكيز آند كريم كراش"
+      },
+      "image": "/assets/images/products/cookies-and-cream-crush.webp",
+      "imageLarge": "/assets/images/products/1000/cookies-and-cream-crush.webp",
+      "displayOrder": 4
+    },
+    {
+      "id": "lemon-mint",
+      "menuGroupId": "drinks",
+      "categoryId": "refreshing-drinks",
+      "name": {
+        "en": "Lemon Mint",
+        "ar": "ليمون نعناع"
+      },
+      "image": "/assets/images/products/lemon-mint.webp",
+      "imageLarge": "/assets/images/products/1000/lemon-mint.webp",
+      "displayOrder": 1
+    },
+    {
+      "id": "lemon-iced-tea",
+      "menuGroupId": "drinks",
+      "categoryId": "refreshing-drinks",
+      "name": {
+        "en": "Lemon Iced Tea",
+        "ar": "آيس تي ليمون"
+      },
+      "image": "/assets/images/products/lemon-iced-tea.webp",
+      "imageLarge": "/assets/images/products/1000/lemon-iced-tea.webp",
+      "displayOrder": 2
+    },
+    {
+      "id": "mango-peach-iced-tea",
+      "menuGroupId": "drinks",
+      "categoryId": "refreshing-drinks",
+      "name": {
+        "en": "Mango Peach Iced Tea",
+        "ar": "آيس تي مانجو وخوخ"
+      },
+      "image": "/assets/images/products/mango-peach-iced-tea.webp",
+      "imageLarge": "/assets/images/products/1000/mango-peach-iced-tea.webp",
+      "displayOrder": 3
+    },
+    {
+      "id": "berry-strawberry-iced-tea",
+      "menuGroupId": "drinks",
+      "categoryId": "refreshing-drinks",
+      "name": {
+        "en": "Berry Strawberry Iced Tea",
+        "ar": "آيس تي توت وفراولة"
+      },
+      "image": "/assets/images/products/berry-strawberry-iced-tea.webp",
+      "imageLarge": "/assets/images/products/1000/berry-strawberry-iced-tea.webp",
+      "displayOrder": 4
+    },
+    {
+      "id": "blue-hawaii-mojito",
+      "menuGroupId": "drinks",
+      "categoryId": "refreshing-drinks",
+      "name": {
+        "en": "Blue Hawaii Mojito",
+        "ar": "موهيتو بلو هاواي"
+      },
+      "image": "/assets/images/products/blue-hawaii-mojito.webp",
+      "imageLarge": "/assets/images/products/1000/blue-hawaii-mojito.webp",
+      "displayOrder": 5
+    },
+    {
+      "id": "pineapple-peach-mojito",
+      "menuGroupId": "drinks",
+      "categoryId": "refreshing-drinks",
+      "name": {
+        "en": "Pineapple Peach Mojito",
+        "ar": "موهيتو أناناس وخوخ"
+      },
+      "image": "/assets/images/products/pineapple-peach-mojito.webp",
+      "imageLarge": "/assets/images/products/1000/pineapple-peach-mojito.webp",
+      "displayOrder": 6
+    },
+    {
+      "id": "watermelon-berry-strawberry-mojito",
+      "menuGroupId": "drinks",
+      "categoryId": "refreshing-drinks",
+      "name": {
+        "en": "Watermelon Berry Strawberry Mojito",
+        "ar": "موهيتو بطيخ وتوت وفراولة"
+      },
+      "image": "/assets/images/products/watermelon-berry-strawberry-mojito.webp",
+      "imageLarge": "/assets/images/products/1000/watermelon-berry-strawberry-mojito.webp",
+      "displayOrder": 7
+    },
+    {
+      "id": "chocolate-muffin",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Chocolate Muffin",
+        "ar": "مافن شوكولاتة"
+      },
+      "image": "/assets/images/products/chocolate-muffin.webp",
+      "imageLarge": "/assets/images/products/1000/chocolate-muffin.webp",
+      "displayOrder": 1
+    },
+    {
+      "id": "vanilla-muffin",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Vanilla Muffin",
+        "ar": "مافن فانيلا"
+      },
+      "image": "/assets/images/products/vanilla-muffin.webp",
+      "imageLarge": "/assets/images/products/1000/vanilla-muffin.webp",
+      "displayOrder": 2
+    },
+    {
+      "id": "marble-muffin",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Marble Muffin",
+        "ar": "مافن ماربل"
+      },
+      "image": "/assets/images/products/marble-muffin.webp",
+      "imageLarge": "/assets/images/products/1000/marble-muffin.webp",
+      "displayOrder": 3
+    },
+    {
+      "id": "vanilla-cookies",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Vanilla Cookies",
+        "ar": "كوكيز فانيلا"
+      },
+      "image": "/assets/images/products/vanilla-cookies.webp",
+      "imageLarge": "/assets/images/products/1000/vanilla-cookies.webp",
+      "displayOrder": 4
+    },
+    {
+      "id": "chocolate-cookies",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Chocolate Cookies",
+        "ar": "كوكيز شوكولاتة"
+      },
+      "image": "/assets/images/products/chocolate-cookies.webp",
+      "imageLarge": "/assets/images/products/1000/chocolate-cookies.webp",
+      "displayOrder": 5
+    },
+    {
+      "id": "mixed-cookies",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Mixed Cookies",
+        "ar": "كوكيز ميكس"
+      },
+      "image": "/assets/images/products/mixed-cookies.webp",
+      "imageLarge": "/assets/images/products/1000/mixed-cookies.webp",
+      "displayOrder": 6
+    },
+    {
+      "id": "brownies",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Brownies",
+        "ar": "براونيز"
+      },
+      "image": "/assets/images/products/brownies.webp",
+      "imageLarge": "/assets/images/products/1000/brownies.webp",
+      "displayOrder": 7
+    },
+    {
+      "id": "chocolate-english-cake",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Chocolate English Cake",
+        "ar": "إنجلش كيك بالشوكولاتة"
+      },
+      "image": "/assets/images/products/chocolate-english-cake.webp",
+      "imageLarge": "/assets/images/products/1000/chocolate-english-cake.webp",
+      "displayOrder": 8
+    },
+    {
+      "id": "marble-english-cake",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Marble English Cake",
+        "ar": "إنجلش كيك ماربل"
+      },
+      "image": "/assets/images/products/marble-english-cake.webp",
+      "imageLarge": "/assets/images/products/1000/marble-english-cake.webp",
+      "displayOrder": 9
+    },
+    {
+      "id": "marble-cake",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Marble Cake",
+        "ar": "ماربل كيك"
+      },
+      "image": "/assets/images/products/marble-cake.webp",
+      "imageLarge": "/assets/images/products/1000/marble-cake.webp",
+      "displayOrder": 10
+    },
+    {
+      "id": "loaf-cake",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Loaf Cake",
+        "ar": "لوف كيك"
+      },
+      "image": "/assets/images/products/loaf-cake.webp",
+      "imageLarge": "/assets/images/products/1000/loaf-cake.webp",
+      "displayOrder": 11
+    },
+    {
+      "id": "waffle",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Waffle",
+        "ar": "وافل"
+      },
+      "image": "/assets/images/products/waffle.webp",
+      "imageLarge": "/assets/images/products/1000/waffle.webp",
+      "displayOrder": 12
+    },
+    {
+      "id": "chocolate-waffle",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Chocolate Waffle",
+        "ar": "وافل شوكولاتة"
+      },
+      "image": "/assets/images/products/chocolate-waffle.webp",
+      "imageLarge": "/assets/images/products/1000/chocolate-waffle.webp",
+      "displayOrder": 13
+    },
+    {
+      "id": "long-chocolate-donut",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Long Chocolate Donut",
+        "ar": "دونات شوكولاتة طويلة"
+      },
+      "image": "/assets/images/products/long-chocolate-donut.webp",
+      "imageLarge": "/assets/images/products/1000/long-chocolate-donut.webp",
+      "displayOrder": 14
+    },
+    {
+      "id": "round-chocolate-donut",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Round Chocolate Donut",
+        "ar": "دونات شوكولاتة دائرية"
+      },
+      "image": "/assets/images/products/round-chocolate-donut.webp",
+      "imageLarge": "/assets/images/products/1000/round-chocolate-donut.webp",
+      "displayOrder": 15
+    },
+    {
+      "id": "wafer-roll",
+      "menuGroupId": "food",
+      "categoryId": "bakery-desserts",
+      "name": {
+        "en": "Wafer Roll",
+        "ar": "ويفر رول"
+      },
+      "image": "/assets/images/products/wafer-roll.webp",
+      "imageLarge": "/assets/images/products/1000/wafer-roll.webp",
+      "displayOrder": 16
+    },
+    {
+      "id": "chicken-fajita-sandwich",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Chicken Fajita Sandwich",
+        "ar": "ساندويتش دجاج فاهيتا"
+      },
+      "image": "/assets/images/products/chicken-fajita-sandwich.webp",
+      "imageLarge": "/assets/images/products/1000/chicken-fajita-sandwich.webp",
+      "displayOrder": 1
+    },
+    {
+      "id": "ranch-chicken-sandwich",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Ranch Chicken Sandwich",
+        "ar": "ساندويتش دجاج رانش"
+      },
+      "image": "/assets/images/products/ranch-chicken-sandwich.webp",
+      "imageLarge": "/assets/images/products/1000/ranch-chicken-sandwich.webp",
+      "displayOrder": 2
+    },
+    {
+      "id": "three-cheese-sandwich",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Three Cheese Sandwich",
+        "ar": "ساندويتش ثلاثة أجبان"
+      },
+      "image": "/assets/images/products/three-cheese-sandwich.webp",
+      "imageLarge": "/assets/images/products/1000/three-cheese-sandwich.webp",
+      "displayOrder": 3
+    },
+    {
+      "id": "halloumi-sandwich",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Halloumi Sandwich",
+        "ar": "ساندويتش حلوم"
+      },
+      "image": "/assets/images/products/halloumi-sandwich.webp",
+      "imageLarge": "/assets/images/products/1000/halloumi-sandwich.webp",
+      "displayOrder": 4
+    },
+    {
+      "id": "tuna-olive-sandwich",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Tuna Olive Sandwich",
+        "ar": "ساندويتش تونة بالزيتون"
+      },
+      "image": "/assets/images/products/tuna-olive-sandwich.webp",
+      "imageLarge": "/assets/images/products/1000/tuna-olive-sandwich.webp",
+      "displayOrder": 5
+    },
+    {
+      "id": "turkey-brown-diet-sandwich",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Turkey Brown Diet Sandwich",
+        "ar": "ساندويتش تركي بخبز أسمر دايت"
+      },
+      "image": "/assets/images/products/turkey-brown-diet-sandwich.webp",
+      "imageLarge": "/assets/images/products/1000/turkey-brown-diet-sandwich.webp",
+      "displayOrder": 6
+    },
+    {
+      "id": "falafel-sandwich",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Falafel Sandwich",
+        "ar": "ساندويتش فلافل"
+      },
+      "image": "/assets/images/products/falafel-sandwich.webp",
+      "imageLarge": "/assets/images/products/1000/falafel-sandwich.webp",
+      "displayOrder": 7
+    },
+    {
+      "id": "mexican-wrap",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Mexican Wrap",
+        "ar": "راب مكسيكي"
+      },
+      "image": "/assets/images/products/mexican-wrap.webp",
+      "imageLarge": "/assets/images/products/1000/mexican-wrap.webp",
+      "displayOrder": 8
+    },
+    {
+      "id": "plain-croissant",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Plain Croissant",
+        "ar": "كرواسون سادة"
+      },
+      "image": "/assets/images/products/plain-croissant.webp",
+      "imageLarge": "/assets/images/products/1000/plain-croissant.webp",
+      "displayOrder": 9
+    },
+    {
+      "id": "cheese-croissant",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Cheese Croissant",
+        "ar": "كرواسون جبن"
+      },
+      "image": "/assets/images/products/cheese-croissant.webp",
+      "imageLarge": "/assets/images/products/1000/cheese-croissant.webp",
+      "displayOrder": 10
+    },
+    {
+      "id": "chocolate-croissant",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Chocolate Croissant",
+        "ar": "كرواسون شوكولاتة"
+      },
+      "image": "/assets/images/products/chocolate-croissant.webp",
+      "imageLarge": "/assets/images/products/1000/chocolate-croissant.webp",
+      "displayOrder": 11
+    },
+    {
+      "id": "zaatar-croissant",
+      "menuGroupId": "food",
+      "categoryId": "sandwiches-croissants",
+      "name": {
+        "en": "Zaatar Croissant",
+        "ar": "كرواسون زعتر"
+      },
+      "image": "/assets/images/products/zaatar-croissant.webp",
+      "imageLarge": "/assets/images/products/1000/zaatar-croissant.webp",
+      "displayOrder": 12
+    },
+    {
+      "id": "mixed-dragees",
+      "menuGroupId": "food",
+      "categoryId": "snacks",
+      "name": {
+        "en": "Mixed Dragees",
+        "ar": "دراجيه مشكلة"
+      },
+      "image": "/assets/images/products/mixed-dragees.webp",
+      "imageLarge": "/assets/images/products/1000/mixed-dragees.webp",
+      "displayOrder": 1
+    },
+    {
+      "id": "pecan-dragees",
+      "menuGroupId": "food",
+      "categoryId": "snacks",
+      "name": {
+        "en": "Pecan Dragees",
+        "ar": "دراجيه البيكان"
+      },
+      "image": "/assets/images/products/pecan-dragees.webp",
+      "imageLarge": "/assets/images/products/1000/pecan-dragees.webp",
+      "displayOrder": 2
+    },
+    {
+      "id": "chocolate-pretzel",
+      "menuGroupId": "food",
+      "categoryId": "snacks",
+      "name": {
+        "en": "Chocolate Pretzel",
+        "ar": "برتزل بالشوكولاتة"
+      },
+      "image": "/assets/images/products/chocolate-pretzel.webp",
+      "imageLarge": "/assets/images/products/1000/chocolate-pretzel.webp",
+      "displayOrder": 3
+    }
+  ]
+}

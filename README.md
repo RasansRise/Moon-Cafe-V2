@@ -6,6 +6,8 @@ Static HTML / CSS / vanilla JS. No build step, no framework, no GSAP dependency.
 |---|---|---|
 | `/` | `index.html` | Arabic, RTL (default) |
 | `/en/` | `en/index.html` | English, LTR |
+| `/menu/` | `menu/index.html` | Arabic menu (generated) |
+| `/en/menu/` | `en/menu/index.html` | English menu (generated) |
 
 ## Run locally
 
@@ -70,6 +72,17 @@ python3 -m http.server 8000
 
 - **Rewards**: the cup appears alone first, then the heading, the four boxes and the CTA appear together in one step. The section is 200svh tall.
 - **Mega Menu fix**: a variable-name clash with the drawer script stopped the dropdown from opening. Fixed by renaming (`drawerPanel`, `isMegaOpen`).
+
+## Menu page (2026-11-25)
+
+- **All 75 products on one page**, with a category **dropdown** (an accessible listbox: All, then Drinks / Food groups with counts, keyboard arrows/Enter/Escape) and pagination (12 per page). The toolbar sticks under the header.
+- **Product names** come from the image file names: hyphens become spaces and each word is capitalised (`cookies-and-cream` → "Cookies And Cream"). Arabic names come from the client CSV (`name.ar` in `products.json`) and are used on the Arabic page.
+- **Data**: `data/products.json` holds each product's category, name and image. Category assignment was done by hand following `menu-inventory.md`. "crush" files go under Crash, and the new items (teas, mojitos, dragées, pretzel, bag coffee maker) went to the closest category.
+- **Images**: `assets/images/products/` holds 600px webp files (about 46 KB each) for the grid, and `assets/images/products/1000/` holds the full size used via `srcset`. Images are lazy-loaded.
+- **Build**: run `python3 tools/build-menu.py` after editing `products.json` or the homepage header/footer. It writes both menu pages with every product in static HTML (crawlable, and visible without JS). `js/menu.js` adds the filters and pagination on top.
+- **Shareable URLs**: `?category=hot-coffee&page=2`, and the Back button works. Mega-menu category links now point to `menu/?category=…`, which replaces the planned separate category pages. On the menu page itself they filter in place without reloading.
+- **Product popup** (`js/popup.js`, native `<dialog>`): the whole card, or its "View details" button, opens it. A black overlay with blur covers the page. Escape, the × button or a click on the overlay closes it (with a fade-out), focus is trapped inside while it is open and returns to the card afterwards, and page scrolling is locked. It shows only known data: image (1000px), name and category. Ingredients and the size/price/calories table are shown as placeholders ("—" / "Details pending confirmation").
+- **Still pending**: prices, calories and ingredients.
 
 ## Other notes
 

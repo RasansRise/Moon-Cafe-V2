@@ -1,0 +1,44 @@
+{
+  "_note": "Verified client-supplied contact channels (2026-11-26). Reuse for the Contact page.",
+  "social": [
+    {
+      "id": "facebook",
+      "icon": "i-facebook",
+      "url": "https://www.facebook.com/people/Mooncafe-sa/100088484894851/",
+      "label": {
+        "ar": "فيسبوك",
+        "en": "Facebook"
+      }
+    },
+    {
+      "id": "instagram",
+      "icon": "i-instagram",
+      "url": "https://www.instagram.com/mooncafe_sa",
+      "label": {
+        "ar": "إنستغرام",
+        "en": "Instagram"
+      },
+      "handle": "@mooncafe_sa"
+    },
+    {
+      "id": "snapchat",
+      "icon": "i-snapchat",
+      "url": "https://www.snapchat.com/@mooncafe_sa",
+      "label": {
+        "ar": "سناب شات",
+        "en": "Snapchat"
+      },
+      "handle": "@mooncafe_sa"
+    },
+    {
+      "id": "whatsapp",
+      "icon": "i-whatsapp",
+      "url": "https://api.whatsapp.com/send?phone=966537226688",
+      "label": {
+        "ar": "واتساب",
+        "en": "WhatsApp"
+      },
+      "phone": "+966537226688"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "_note": "Interim branch list supplied by the client (2026-11-26); Arabic is the source, English is a translation pending approval. Photos, Google Maps links, hours and phones pending — fields stay null and are not rendered.",
+  "branches": [
+    {
+      "id": "ministry-of-defense",
+      "name": {
+        "ar": "فرع وزارة الدفاع",
+        "en": "Ministry of Defense Branch"
+      },
+      "address": {
+        "ar": "وزارة الدفاع بالرياض",
+        "en": "Ministry of Defense, Riyadh"
+      },
+      "image": null,
+      "googleMapsUrl": null,
+      "openingHours": null,
+      "phone": null,
+      "displayOrder": 1
+    },
+    {
+      "id": "imam-university-1",
+      "name": {
+        "ar": "فرع جامعة الإمام 1",
+        "en": "Imam University Branch 1"
+      },
+      "address": {
+        "ar": "مبنى 324 الدور الارضي بجامعة الإمام قسم البنات",
+        "en": "Building 324, Ground Floor, Imam University – Female Section"
+      },
+      "image": null,
+      "googleMapsUrl": null,
+      "openingHours": null,
+      "phone": null,
+      "displayOrder": 2
+    },
+    {
+      "id": "imam-university-2",
+      "name": {
+        "ar": "فرع جامعة الإمام 2",
+        "en": "Imam University Branch 2"
+      },
+      "address": {
+        "ar": "مبنى 325 الدور الارضي بجامعة الإمام قسم البنات",
+        "en": "Building 325, Ground Floor, Imam University – Female Section"
+      },
+      "image": null,
+      "googleMapsUrl": null,
+      "openingHours": null,
+      "phone": null,
+      "displayOrder": 3
+    },
+    {
+      "id": "imam-university-3",
+      "name": {
+        "ar": "فرع جامعة الإمام 3",
+        "en": "Imam University Branch 3"
+      },
+      "address": {
+        "ar": "الدور الارضي مبني 323 بجامعة الإمام قسم البنات",
+        "en": "Ground Floor, Building 323, Imam University – Female Section"
+      },
+      "image": null,
+      "googleMapsUrl": null,
+      "openingHours": null,
+      "phone": null,
+      "displayOrder": 4
+    },
+    {
+      "id": "imam-university-4",
+      "name": {
+        "ar": "فرع جامعة الإمام 4",
+        "en": "Imam University Branch 4"
+      },
+      "address": {
+        "ar": "مبني 324 الدور الارضي بجامعة الإمام قسم البنات",
+        "en": "Building 324, Ground Floor, Imam University – Female Section"
+      },
+      "image": null,
+      "googleMapsUrl": null,
+      "openingHours": null,
+      "phone": null,
+      "displayOrder": 5
+    },
+    {
+      "id": "institute-of-public-administration",
+      "name": {
+        "ar": "فرع معهد الإدارة",
+        "en": "Institute of Public Administration Branch"
+      },
+      "address": {
+        "ar": "معهد الإدارة (العام)",
+        "en": "Institute of Public Administration"
+      },
+      "image": null,
+      "googleMapsUrl": null,
+      "openingHours": null,
+      "phone": null,
+      "displayOrder": 6
+    },
+    {
+      "id": "king-saud-university",
+      "name": {
+        "ar": "فرع جامعة الملك سعود",
+        "en": "King Saud University Branch"
+      },
+      "address": {
+        "ar": "كلية الأعمال بجامعة الملك سعود قسم البنين",
+        "en": "College of Business Administration, King Saud University – Male Section"
+      },
+      "image": null,
+      "googleMapsUrl": null,
+      "openingHours": null,
+      "phone": null,
+      "displayOrder": 7
+    }
+  ]
+}

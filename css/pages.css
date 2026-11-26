@@ -723,8 +723,6 @@
 .cat-pager__dir svg { width: 16px; height: 16px; }
 .cat-pager__back { transform: scaleX(-1); }
 :root[dir="rtl"] .cat-pager__dir svg { transform: scaleX(-1); }
-:root[dir="rtl"]  .cat-pager__dir .cat-pager__back{ transform: scaleX(1); }
-
 :root[dir="rtl"] .cat-pager__back { transform: none; }
 .cat-pager__name { font-size: 1.1rem; font-weight: 700; color: var(--text-strong); transition: color var(--dur-fast) ease; }
 .cat-pager__link:hover .cat-pager__name { color: var(--brand-gold); }
@@ -748,3 +746,58 @@
   .cat-pager { grid-template-columns: 1fr 1fr; }
   .cat-pager__all { grid-column: 1 / -1; grid-row: 2; justify-self: center; }
 }
+
+/* ==========================================================================
+   Branches page — 3 / 2 / 1 column card grid (design.md §4.5)
+   ========================================================================== */
+.branches-page { padding-bottom: clamp(48px, 7vw, 96px); }
+.branch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.branch-grid > li { display: flex; }
+.branch-tile {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 0.015);
+  transition: border-color var(--dur-med) ease, transform var(--dur-med) var(--ease-out);
+}
+.branch-tile:hover { border-color: rgb(218 175 103 / 0.55); }
+@media (hover: hover) { .branch-tile:hover { transform: translateY(-4px); } }
+.branch-tile__media { aspect-ratio: 16 / 10; overflow: hidden; }
+.branch-tile__media > img { width: 100%; height: 100%; object-fit: cover; }
+.branch-tile__placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(60% 70% at 50% 55%, rgb(218 175 103 / 0.16), transparent 70%),
+    repeating-linear-gradient(135deg, rgb(255 255 255 / 0.02) 0 2px, transparent 2px 14px),
+    #0e0a07;
+}
+.branch-tile__placeholder img { width: 22%; min-width: 64px; opacity: 0.55; transition: opacity var(--dur-med) ease, transform 700ms var(--ease-out); }
+.branch-tile:hover .branch-tile__placeholder img { opacity: 0.8; transform: scale(1.05); }
+.branch-tile__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: clamp(18px, 2vw, 24px);
+  border-top: 1px solid var(--border-soft);
+}
+.branch-tile__name { font-size: clamp(1.15rem, 1.6vw, 1.4rem); font-weight: 700; line-height: 1.25; color: var(--text-strong); }
+.branch-tile__list { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.branch-tile__meta { display: flex; align-items: flex-start; gap: 10px; font-size: 0.98rem; line-height: 1.5; color: var(--text-body); }
+.branch-tile__meta svg { width: 20px; height: 20px; flex: none; margin-top: 2px; color: var(--brand-gold); }
+.branch-tile__cta { align-self: flex-start; margin-top: auto; }
+
+@media (max-width: 999px) { .branch-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 599px) { .branch-grid { grid-template-columns: 1fr; } }

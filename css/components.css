@@ -137,8 +137,8 @@ a.is-pending { cursor: default; }
   transition: transform var(--dur-med) var(--ease-out);
 }
 .primary-nav__link:hover { color: var(--brand-gold); }
-.primary-nav__link[aria-current="page"] { color: var(--brand-gold); }
-.primary-nav__link[aria-current="page"]::after,
+.primary-nav__link[aria-current] { color: var(--brand-gold); }
+.primary-nav__link[aria-current]::after,
 .primary-nav__link:hover::after { transform: scaleX(1); }
 
 /* Mega-menu disclosure toggle (keyboard/touch); the Menu text itself links to /menu/ */
@@ -357,7 +357,7 @@ a:focus-visible > .roll .roll__b { transform: translateY(calc(-100% - var(--roll
 }
 :root[lang="ar"] .drawer__link { text-transform: none; }
 .drawer__link:hover,
-.drawer__link[aria-current="page"] { color: var(--brand-gold); }
+.drawer__link[aria-current] { color: var(--brand-gold); }
 .drawer__lang {
   display: inline-flex;
   align-items: center;

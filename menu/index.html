@@ -30,8 +30,6 @@
   <script src="../js/navigation.js" defer></script>
   <script src="../js/animations.js" defer></script>
   <script src="../js/main.js" defer></script>
-  <script src="../js/menu.js" defer></script>
-  <script src="../js/popup.js" defer></script>
 </head>
 <body class="page-menu">
   <!-- Icon sprite -->
@@ -79,19 +77,19 @@
                 <div class="mega-menu__col">
                   <p class="mega-menu__heading" id="mega-drinks">المشروبات</p>
                   <ul class="mega-menu__list" aria-labelledby="mega-drinks">
-                    <li><a class="mega-menu__link" href="./?category=hot-coffee">القهوة الساخنة</a></li>
-                    <li><a class="mega-menu__link" href="./?category=hot-drinks">المشروبات الساخنة</a></li>
-                    <li><a class="mega-menu__link" href="./?category=iced-coffee">القهوة الباردة</a></li>
-                    <li><a class="mega-menu__link" href="./?category=crash">الكراش</a></li>
-                    <li><a class="mega-menu__link" href="./?category=refreshing-drinks">المشروبات المنعشة</a></li>
+                    <li><a class="mega-menu__link" href="./hot-coffee/">القهوة الساخنة</a></li>
+                    <li><a class="mega-menu__link" href="./hot-drinks/">المشروبات الساخنة</a></li>
+                    <li><a class="mega-menu__link" href="./iced-coffee/">القهوة الباردة</a></li>
+                    <li><a class="mega-menu__link" href="./crash/">الكراش</a></li>
+                    <li><a class="mega-menu__link" href="./refreshing-drinks/">المشروبات المنعشة</a></li>
                   </ul>
                 </div>
                 <div class="mega-menu__col">
                   <p class="mega-menu__heading" id="mega-food">الأكل</p>
                   <ul class="mega-menu__list" aria-labelledby="mega-food">
-                    <li><a class="mega-menu__link" href="./?category=bakery-desserts">المخبوزات والحلويات</a></li>
-                    <li><a class="mega-menu__link" href="./?category=sandwiches-croissants">الساندوتشات والكرواسون</a></li>
-                    <li><a class="mega-menu__link" href="./?category=snacks">السناكس</a></li>
+                    <li><a class="mega-menu__link" href="./bakery-desserts/">المخبوزات والحلويات</a></li>
+                    <li><a class="mega-menu__link" href="./sandwiches-croissants/">الساندوتشات والكرواسون</a></li>
+                    <li><a class="mega-menu__link" href="./snacks/">السناكس</a></li>
                   </ul>
                 </div>
               </div>
@@ -164,901 +162,116 @@
       <div class="container menu-hero__inner">
         <p class="eyebrow menu-hero__eyebrow">مـــــون كافيـــــة</p>
         <h1 class="heading menu-hero__title" id="menu-title">المنيو</h1>
-        <p class="menu-hero__intro">اختر ما يناسب مزاجك من القهوة والمشروبات والمخبوزات والمزيد.</p>
+        <p class="menu-hero__intro">اختر القسم واكتشف منتجاته.</p>
       </div>
     </section>
 
-    <section class="menu-catalog" aria-labelledby="products-title" data-menu data-i18n="{&quot;status&quot;: &quot;عرض {from}–{to} من {total} منتج&quot;, &quot;prev&quot;: &quot;الصفحة السابقة&quot;, &quot;next&quot;: &quot;الصفحة التالية&quot;, &quot;page&quot;: &quot;الصفحة {n}&quot;}">
+    <section class="menu-group menu-group--drinks" id="drinks" aria-labelledby="group-drinks">
       <div class="container">
-        <h2 class="visually-hidden" id="products-title">كل المنتجات</h2>
-        <div class="menu-toolbar" data-menu-toolbar>
-          <div class="menu-select" data-menu-select>
-            <span class="menu-select__label" id="filter-label">النوع</span>
-            <button class="menu-select__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="filter-label filter-value" data-select-btn>
-              <span class="menu-select__value" id="filter-value" data-select-value>الكل</span>
-              <span class="menu-filter__count" data-select-count>75</span>
-              <svg class="menu-select__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <ul class="menu-select__list" role="listbox" aria-labelledby="filter-label" tabindex="-1" data-select-list>
-              <li class="menu-select__option" id="opt-all" role="option" data-filter="all" aria-selected="true"><svg class="menu-select__check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="menu-select__text">الكل</span><span class="menu-filter__count">75</span></li>
-              <li class="menu-select__group" role="presentation">المشروبات</li>
-              <li class="menu-select__option" id="opt-hot-coffee" role="option" data-filter="hot-coffee" aria-selected="false"><svg class="menu-select__check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="menu-select__text">القهوة الساخنة</span><span class="menu-filter__count">16</span></li>
-              <li class="menu-select__option" id="opt-hot-drinks" role="option" data-filter="hot-drinks" aria-selected="false"><svg class="menu-select__check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="menu-select__text">المشروبات الساخنة</span><span class="menu-filter__count">13</span></li>
-              <li class="menu-select__option" id="opt-iced-coffee" role="option" data-filter="iced-coffee" aria-selected="false"><svg class="menu-select__check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="menu-select__text">القهوة الباردة</span><span class="menu-filter__count">4</span></li>
-              <li class="menu-select__option" id="opt-crash" role="option" data-filter="crash" aria-selected="false"><svg class="menu-select__check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="menu-select__text">الكراش</span><span class="menu-filter__count">4</span></li>
-              <li class="menu-select__option" id="opt-refreshing-drinks" role="option" data-filter="refreshing-drinks" aria-selected="false"><svg class="menu-select__check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="menu-select__text">المشروبات المنعشة</span><span class="menu-filter__count">7</span></li>
-              <li class="menu-select__group" role="presentation">الأكل</li>
-              <li class="menu-select__option" id="opt-bakery-desserts" role="option" data-filter="bakery-desserts" aria-selected="false"><svg class="menu-select__check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="menu-select__text">المخبوزات والحلويات</span><span class="menu-filter__count">16</span></li>
-              <li class="menu-select__option" id="opt-sandwiches-croissants" role="option" data-filter="sandwiches-croissants" aria-selected="false"><svg class="menu-select__check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="menu-select__text">الساندوتشات والكرواسون</span><span class="menu-filter__count">12</span></li>
-              <li class="menu-select__option" id="opt-snacks" role="option" data-filter="snacks" aria-selected="false"><svg class="menu-select__check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="menu-select__text">السناكس</span><span class="menu-filter__count">3</span></li>
-            </ul>
-          </div>
-          <p class="menu-status" aria-live="polite" data-menu-status></p>
+        <div class="menu-group__head">
+          <h2 class="heading menu-group__title" id="group-drinks">المشروبات</h2>
         </div>
-
-        <!-- English names from image file names, Arabic names from client CSV. Prices / calories / ingredients pending verified client data. -->
-        <ul class="menu-grid" data-menu-grid>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/espresso.webp" srcset="../assets/images/products/espresso.webp 600w, ../assets/images/products/1000/espresso.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="إسبريسو" width="600" height="600" fetchpriority="high" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">إسبريسو</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل إسبريسو"
-                  data-product-open data-name="إسبريسو" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/espresso.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/macchiato.webp" srcset="../assets/images/products/macchiato.webp 600w, ../assets/images/products/1000/macchiato.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ماكياتو" width="600" height="600" fetchpriority="high" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">ماكياتو</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ماكياتو"
-                  data-product-open data-name="ماكياتو" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/macchiato.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/cortado.webp" srcset="../assets/images/products/cortado.webp 600w, ../assets/images/products/1000/cortado.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كورتادو" width="600" height="600" fetchpriority="high" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">كورتادو</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كورتادو"
-                  data-product-open data-name="كورتادو" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/cortado.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/flat-white.webp" srcset="../assets/images/products/flat-white.webp 600w, ../assets/images/products/1000/flat-white.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="فلات وايت" width="600" height="600" fetchpriority="high" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">فلات وايت</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل فلات وايت"
-                  data-product-open data-name="فلات وايت" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/flat-white.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/cappuccino.webp" srcset="../assets/images/products/cappuccino.webp 600w, ../assets/images/products/1000/cappuccino.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كابتشينو" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">كابتشينو</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كابتشينو"
-                  data-product-open data-name="كابتشينو" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/cappuccino.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/caffe-latte.webp" srcset="../assets/images/products/caffe-latte.webp 600w, ../assets/images/products/1000/caffe-latte.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كوفي لاتيه" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">كوفي لاتيه</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كوفي لاتيه"
-                  data-product-open data-name="كوفي لاتيه" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/caffe-latte.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/cafe-mocha.webp" srcset="../assets/images/products/cafe-mocha.webp 600w, ../assets/images/products/1000/cafe-mocha.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كوفي موكا" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">كوفي موكا</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كوفي موكا"
-                  data-product-open data-name="كوفي موكا" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/cafe-mocha.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/white-mocha.webp" srcset="../assets/images/products/white-mocha.webp 600w, ../assets/images/products/1000/white-mocha.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="وايت موكا" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">وايت موكا</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل وايت موكا"
-                  data-product-open data-name="وايت موكا" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/white-mocha.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/caramel-macchiato.webp" srcset="../assets/images/products/caramel-macchiato.webp 600w, ../assets/images/products/1000/caramel-macchiato.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كراميل ماكياتو" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">كراميل ماكياتو</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كراميل ماكياتو"
-                  data-product-open data-name="كراميل ماكياتو" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/caramel-macchiato.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/coffee-box.webp" srcset="../assets/images/products/coffee-box.webp 600w, ../assets/images/products/1000/coffee-box.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كوفي بوكس" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">كوفي بوكس</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كوفي بوكس"
-                  data-product-open data-name="كوفي بوكس" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/coffee-box.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/bag-coffee-maker.webp" srcset="../assets/images/products/bag-coffee-maker.webp 600w, ../assets/images/products/1000/bag-coffee-maker.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="أداة تحضير القهوة بالأكياس" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">أداة تحضير القهوة بالأكياس</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل أداة تحضير القهوة بالأكياس"
-                  data-product-open data-name="أداة تحضير القهوة بالأكياس" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/bag-coffee-maker.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/turkish-coffee.webp" srcset="../assets/images/products/turkish-coffee.webp 600w, ../assets/images/products/1000/turkish-coffee.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="قهوة تركي" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">قهوة تركي</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل قهوة تركي"
-                  data-product-open data-name="قهوة تركي" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/turkish-coffee.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/saudi-coffee.webp" srcset="../assets/images/products/saudi-coffee.webp 600w, ../assets/images/products/1000/saudi-coffee.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="قهوة سعودي" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">قهوة سعودي</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل قهوة سعودي"
-                  data-product-open data-name="قهوة سعودي" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/saudi-coffee.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/american-coffee.webp" srcset="../assets/images/products/american-coffee.webp 600w, ../assets/images/products/1000/american-coffee.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="قهوة أمريكي" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">قهوة أمريكي</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل قهوة أمريكي"
-                  data-product-open data-name="قهوة أمريكي" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/american-coffee.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/french-coffee.webp" srcset="../assets/images/products/french-coffee.webp 600w, ../assets/images/products/1000/french-coffee.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="قهوة فرنسي" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">قهوة فرنسي</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل قهوة فرنسي"
-                  data-product-open data-name="قهوة فرنسي" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/french-coffee.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/italiano.webp" srcset="../assets/images/products/italiano.webp 600w, ../assets/images/products/1000/italiano.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="إيطاليانو" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الساخنة</p>
-                <h3 class="menu-card__name">إيطاليانو</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل إيطاليانو"
-                  data-product-open data-name="إيطاليانو" data-category="القهوة الساخنة" data-image="../assets/images/products/1000/italiano.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/cookies-and-cream.webp" srcset="../assets/images/products/cookies-and-cream.webp 600w, ../assets/images/products/1000/cookies-and-cream.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كوكيز آند كريم" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">كوكيز آند كريم</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كوكيز آند كريم"
-                  data-product-open data-name="كوكيز آند كريم" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/cookies-and-cream.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/red-velvet.webp" srcset="../assets/images/products/red-velvet.webp 600w, ../assets/images/products/1000/red-velvet.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ريد فيلفيت" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">ريد فيلفيت</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ريد فيلفيت"
-                  data-product-open data-name="ريد فيلفيت" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/red-velvet.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/french-mocha.webp" srcset="../assets/images/products/french-mocha.webp 600w, ../assets/images/products/1000/french-mocha.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="موكا فرنسي" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">موكا فرنسي</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل موكا فرنسي"
-                  data-product-open data-name="موكا فرنسي" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/french-mocha.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/french-toffee.webp" srcset="../assets/images/products/french-toffee.webp 600w, ../assets/images/products/1000/french-toffee.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="توفي فرنسي" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">توفي فرنسي</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل توفي فرنسي"
-                  data-product-open data-name="توفي فرنسي" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/french-toffee.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/nirvana.webp" srcset="../assets/images/products/nirvana.webp 600w, ../assets/images/products/1000/nirvana.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="نيرفانا" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">نيرفانا</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل نيرفانا"
-                  data-product-open data-name="نيرفانا" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/nirvana.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/hot-chocolate.webp" srcset="../assets/images/products/hot-chocolate.webp 600w, ../assets/images/products/1000/hot-chocolate.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="شوكولاتة ساخنة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">شوكولاتة ساخنة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل شوكولاتة ساخنة"
-                  data-product-open data-name="شوكولاتة ساخنة" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/hot-chocolate.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/steam-milk.webp" srcset="../assets/images/products/steam-milk.webp 600w, ../assets/images/products/1000/steam-milk.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="حليب بالبخار" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">حليب بالبخار</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل حليب بالبخار"
-                  data-product-open data-name="حليب بالبخار" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/steam-milk.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/ginger-milk.webp" srcset="../assets/images/products/ginger-milk.webp 600w, ../assets/images/products/1000/ginger-milk.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="حليب زنجبيل" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">حليب زنجبيل</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل حليب زنجبيل"
-                  data-product-open data-name="حليب زنجبيل" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/ginger-milk.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/karak-tea.webp" srcset="../assets/images/products/karak-tea.webp 600w, ../assets/images/products/1000/karak-tea.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="شاي كرك" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">شاي كرك</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل شاي كرك"
-                  data-product-open data-name="شاي كرك" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/karak-tea.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/english-tea.webp" srcset="../assets/images/products/english-tea.webp 600w, ../assets/images/products/1000/english-tea.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="شاي إنجليزي" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">شاي إنجليزي</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل شاي إنجليزي"
-                  data-product-open data-name="شاي إنجليزي" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/english-tea.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/green-tea.webp" srcset="../assets/images/products/green-tea.webp 600w, ../assets/images/products/1000/green-tea.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="شاي أخضر" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">شاي أخضر</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل شاي أخضر"
-                  data-product-open data-name="شاي أخضر" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/green-tea.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/mint-tea.webp" srcset="../assets/images/products/mint-tea.webp 600w, ../assets/images/products/1000/mint-tea.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="شاي بالنعناع" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">شاي بالنعناع</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل شاي بالنعناع"
-                  data-product-open data-name="شاي بالنعناع" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/mint-tea.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="hot-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/moroccan-tea.webp" srcset="../assets/images/products/moroccan-tea.webp 600w, ../assets/images/products/1000/moroccan-tea.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="شاي مغربي" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات الساخنة</p>
-                <h3 class="menu-card__name">شاي مغربي</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل شاي مغربي"
-                  data-product-open data-name="شاي مغربي" data-category="المشروبات الساخنة" data-image="../assets/images/products/1000/moroccan-tea.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="iced-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/iced-americano.webp" srcset="../assets/images/products/iced-americano.webp 600w, ../assets/images/products/1000/iced-americano.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="آيس أمريكانو" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الباردة</p>
-                <h3 class="menu-card__name">آيس أمريكانو</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل آيس أمريكانو"
-                  data-product-open data-name="آيس أمريكانو" data-category="القهوة الباردة" data-image="../assets/images/products/1000/iced-americano.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="iced-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/iced-caramel-macchiato.webp" srcset="../assets/images/products/iced-caramel-macchiato.webp 600w, ../assets/images/products/1000/iced-caramel-macchiato.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="آيس كراميل ماكياتو" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الباردة</p>
-                <h3 class="menu-card__name">آيس كراميل ماكياتو</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل آيس كراميل ماكياتو"
-                  data-product-open data-name="آيس كراميل ماكياتو" data-category="القهوة الباردة" data-image="../assets/images/products/1000/iced-caramel-macchiato.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="iced-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/spanish-latte.webp" srcset="../assets/images/products/spanish-latte.webp 600w, ../assets/images/products/1000/spanish-latte.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="سبانش لاتيه" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الباردة</p>
-                <h3 class="menu-card__name">سبانش لاتيه</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل سبانش لاتيه"
-                  data-product-open data-name="سبانش لاتيه" data-category="القهوة الباردة" data-image="../assets/images/products/1000/spanish-latte.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="iced-coffee">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/iced-latte.webp" srcset="../assets/images/products/iced-latte.webp 600w, ../assets/images/products/1000/iced-latte.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="آيس لاتيه" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">القهوة الباردة</p>
-                <h3 class="menu-card__name">آيس لاتيه</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل آيس لاتيه"
-                  data-product-open data-name="آيس لاتيه" data-category="القهوة الباردة" data-image="../assets/images/products/1000/iced-latte.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="crash">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/red-velvet-crash.webp" srcset="../assets/images/products/red-velvet-crash.webp 600w, ../assets/images/products/1000/red-velvet-crash.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ريد فيلفيت كراش" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الكراش</p>
-                <h3 class="menu-card__name">ريد فيلفيت كراش</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ريد فيلفيت كراش"
-                  data-product-open data-name="ريد فيلفيت كراش" data-category="الكراش" data-image="../assets/images/products/1000/red-velvet-crash.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="crash">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/toffee-crash.webp" srcset="../assets/images/products/toffee-crash.webp 600w, ../assets/images/products/1000/toffee-crash.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="توفي كراش" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الكراش</p>
-                <h3 class="menu-card__name">توفي كراش</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل توفي كراش"
-                  data-product-open data-name="توفي كراش" data-category="الكراش" data-image="../assets/images/products/1000/toffee-crash.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="crash">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/mocha-crash.webp" srcset="../assets/images/products/mocha-crash.webp 600w, ../assets/images/products/1000/mocha-crash.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="موكا كراش" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الكراش</p>
-                <h3 class="menu-card__name">موكا كراش</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل موكا كراش"
-                  data-product-open data-name="موكا كراش" data-category="الكراش" data-image="../assets/images/products/1000/mocha-crash.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="crash">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/cookies-and-cream-crush.webp" srcset="../assets/images/products/cookies-and-cream-crush.webp 600w, ../assets/images/products/1000/cookies-and-cream-crush.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كوكيز آند كريم كراش" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الكراش</p>
-                <h3 class="menu-card__name">كوكيز آند كريم كراش</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كوكيز آند كريم كراش"
-                  data-product-open data-name="كوكيز آند كريم كراش" data-category="الكراش" data-image="../assets/images/products/1000/cookies-and-cream-crush.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="refreshing-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/lemon-mint.webp" srcset="../assets/images/products/lemon-mint.webp 600w, ../assets/images/products/1000/lemon-mint.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ليمون نعناع" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات المنعشة</p>
-                <h3 class="menu-card__name">ليمون نعناع</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ليمون نعناع"
-                  data-product-open data-name="ليمون نعناع" data-category="المشروبات المنعشة" data-image="../assets/images/products/1000/lemon-mint.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="refreshing-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/lemon-iced-tea.webp" srcset="../assets/images/products/lemon-iced-tea.webp 600w, ../assets/images/products/1000/lemon-iced-tea.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="آيس تي ليمون" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات المنعشة</p>
-                <h3 class="menu-card__name">آيس تي ليمون</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل آيس تي ليمون"
-                  data-product-open data-name="آيس تي ليمون" data-category="المشروبات المنعشة" data-image="../assets/images/products/1000/lemon-iced-tea.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="refreshing-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/mango-peach-iced-tea.webp" srcset="../assets/images/products/mango-peach-iced-tea.webp 600w, ../assets/images/products/1000/mango-peach-iced-tea.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="آيس تي مانجو وخوخ" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات المنعشة</p>
-                <h3 class="menu-card__name">آيس تي مانجو وخوخ</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل آيس تي مانجو وخوخ"
-                  data-product-open data-name="آيس تي مانجو وخوخ" data-category="المشروبات المنعشة" data-image="../assets/images/products/1000/mango-peach-iced-tea.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="refreshing-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/berry-strawberry-iced-tea.webp" srcset="../assets/images/products/berry-strawberry-iced-tea.webp 600w, ../assets/images/products/1000/berry-strawberry-iced-tea.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="آيس تي توت وفراولة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات المنعشة</p>
-                <h3 class="menu-card__name">آيس تي توت وفراولة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل آيس تي توت وفراولة"
-                  data-product-open data-name="آيس تي توت وفراولة" data-category="المشروبات المنعشة" data-image="../assets/images/products/1000/berry-strawberry-iced-tea.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="refreshing-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/blue-hawaii-mojito.webp" srcset="../assets/images/products/blue-hawaii-mojito.webp 600w, ../assets/images/products/1000/blue-hawaii-mojito.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="موهيتو بلو هاواي" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات المنعشة</p>
-                <h3 class="menu-card__name">موهيتو بلو هاواي</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل موهيتو بلو هاواي"
-                  data-product-open data-name="موهيتو بلو هاواي" data-category="المشروبات المنعشة" data-image="../assets/images/products/1000/blue-hawaii-mojito.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="refreshing-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/pineapple-peach-mojito.webp" srcset="../assets/images/products/pineapple-peach-mojito.webp 600w, ../assets/images/products/1000/pineapple-peach-mojito.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="موهيتو أناناس وخوخ" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات المنعشة</p>
-                <h3 class="menu-card__name">موهيتو أناناس وخوخ</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل موهيتو أناناس وخوخ"
-                  data-product-open data-name="موهيتو أناناس وخوخ" data-category="المشروبات المنعشة" data-image="../assets/images/products/1000/pineapple-peach-mojito.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="refreshing-drinks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/watermelon-berry-strawberry-mojito.webp" srcset="../assets/images/products/watermelon-berry-strawberry-mojito.webp 600w, ../assets/images/products/1000/watermelon-berry-strawberry-mojito.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="موهيتو بطيخ وتوت وفراولة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المشروبات المنعشة</p>
-                <h3 class="menu-card__name">موهيتو بطيخ وتوت وفراولة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل موهيتو بطيخ وتوت وفراولة"
-                  data-product-open data-name="موهيتو بطيخ وتوت وفراولة" data-category="المشروبات المنعشة" data-image="../assets/images/products/1000/watermelon-berry-strawberry-mojito.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/chocolate-muffin.webp" srcset="../assets/images/products/chocolate-muffin.webp 600w, ../assets/images/products/1000/chocolate-muffin.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="مافن شوكولاتة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">مافن شوكولاتة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل مافن شوكولاتة"
-                  data-product-open data-name="مافن شوكولاتة" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/chocolate-muffin.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/vanilla-muffin.webp" srcset="../assets/images/products/vanilla-muffin.webp 600w, ../assets/images/products/1000/vanilla-muffin.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="مافن فانيليا" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">مافن فانيليا</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل مافن فانيليا"
-                  data-product-open data-name="مافن فانيليا" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/vanilla-muffin.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/marble-muffin.webp" srcset="../assets/images/products/marble-muffin.webp 600w, ../assets/images/products/1000/marble-muffin.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="مافن ماربل" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">مافن ماربل</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل مافن ماربل"
-                  data-product-open data-name="مافن ماربل" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/marble-muffin.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/vanilla-cookies.webp" srcset="../assets/images/products/vanilla-cookies.webp 600w, ../assets/images/products/1000/vanilla-cookies.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كوكيز فانيليا" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">كوكيز فانيليا</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كوكيز فانيليا"
-                  data-product-open data-name="كوكيز فانيليا" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/vanilla-cookies.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/chocolate-cookies.webp" srcset="../assets/images/products/chocolate-cookies.webp 600w, ../assets/images/products/1000/chocolate-cookies.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كوكيز شوكولاتة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">كوكيز شوكولاتة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كوكيز شوكولاتة"
-                  data-product-open data-name="كوكيز شوكولاتة" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/chocolate-cookies.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/mixed-cookies.webp" srcset="../assets/images/products/mixed-cookies.webp 600w, ../assets/images/products/1000/mixed-cookies.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كوكيز ميكس" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">كوكيز ميكس</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كوكيز ميكس"
-                  data-product-open data-name="كوكيز ميكس" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/mixed-cookies.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/brownies.webp" srcset="../assets/images/products/brownies.webp 600w, ../assets/images/products/1000/brownies.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="براونيز" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">براونيز</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل براونيز"
-                  data-product-open data-name="براونيز" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/brownies.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/english-cake-chocolate.webp" srcset="../assets/images/products/english-cake-chocolate.webp 600w, ../assets/images/products/1000/english-cake-chocolate.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="إنجليش كيك شوكولاتة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">إنجليش كيك شوكولاتة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل إنجليش كيك شوكولاتة"
-                  data-product-open data-name="إنجليش كيك شوكولاتة" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/english-cake-chocolate.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/english-cake-marble.webp" srcset="../assets/images/products/english-cake-marble.webp 600w, ../assets/images/products/1000/english-cake-marble.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="إنجليش كيك ماربل" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">إنجليش كيك ماربل</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل إنجليش كيك ماربل"
-                  data-product-open data-name="إنجليش كيك ماربل" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/english-cake-marble.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/marble-cake.webp" srcset="../assets/images/products/marble-cake.webp 600w, ../assets/images/products/1000/marble-cake.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ماربل كيك" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">ماربل كيك</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ماربل كيك"
-                  data-product-open data-name="ماربل كيك" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/marble-cake.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/loaf-cake.webp" srcset="../assets/images/products/loaf-cake.webp 600w, ../assets/images/products/1000/loaf-cake.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="لوف كيك" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">لوف كيك</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل لوف كيك"
-                  data-product-open data-name="لوف كيك" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/loaf-cake.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/vanilla-waffle.webp" srcset="../assets/images/products/vanilla-waffle.webp 600w, ../assets/images/products/1000/vanilla-waffle.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="وافل فانيليا" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">وافل فانيليا</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل وافل فانيليا"
-                  data-product-open data-name="وافل فانيليا" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/vanilla-waffle.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/chocolate-waffle.webp" srcset="../assets/images/products/chocolate-waffle.webp 600w, ../assets/images/products/1000/chocolate-waffle.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="وافل شوكولاتة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">وافل شوكولاتة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل وافل شوكولاتة"
-                  data-product-open data-name="وافل شوكولاتة" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/chocolate-waffle.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/chocolate-donut-long.webp" srcset="../assets/images/products/chocolate-donut-long.webp 600w, ../assets/images/products/1000/chocolate-donut-long.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="دونات شوكولاتة طويلة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">دونات شوكولاتة طويلة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل دونات شوكولاتة طويلة"
-                  data-product-open data-name="دونات شوكولاتة طويلة" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/chocolate-donut-long.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/chocolate-donut-ring.webp" srcset="../assets/images/products/chocolate-donut-ring.webp 600w, ../assets/images/products/1000/chocolate-donut-ring.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="دونات شوكولاتة دائرية" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">دونات شوكولاتة دائرية</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل دونات شوكولاتة دائرية"
-                  data-product-open data-name="دونات شوكولاتة دائرية" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/chocolate-donut-ring.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="bakery-desserts">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/wafer-roll.webp" srcset="../assets/images/products/wafer-roll.webp 600w, ../assets/images/products/1000/wafer-roll.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ويفر رول" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">المخبوزات والحلويات</p>
-                <h3 class="menu-card__name">ويفر رول</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ويفر رول"
-                  data-product-open data-name="ويفر رول" data-category="المخبوزات والحلويات" data-image="../assets/images/products/1000/wafer-roll.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/fajita.webp" srcset="../assets/images/products/fajita.webp 600w, ../assets/images/products/1000/fajita.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ساندوتش فاهيتا" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">ساندوتش فاهيتا</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ساندوتش فاهيتا"
-                  data-product-open data-name="ساندوتش فاهيتا" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/fajita.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/chicken-ranch.webp" srcset="../assets/images/products/chicken-ranch.webp 600w, ../assets/images/products/1000/chicken-ranch.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ساندوتش تشيكن رانش" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">ساندوتش تشيكن رانش</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ساندوتش تشيكن رانش"
-                  data-product-open data-name="ساندوتش تشيكن رانش" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/chicken-ranch.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/triple-cheese.webp" srcset="../assets/images/products/triple-cheese.webp 600w, ../assets/images/products/1000/triple-cheese.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ساندوتش تريبل تشيز" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">ساندوتش تريبل تشيز</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ساندوتش تريبل تشيز"
-                  data-product-open data-name="ساندوتش تريبل تشيز" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/triple-cheese.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/halloumi-sandwich.webp" srcset="../assets/images/products/halloumi-sandwich.webp 600w, ../assets/images/products/1000/halloumi-sandwich.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ساندويتش حلوم" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">ساندويتش حلوم</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ساندويتش حلوم"
-                  data-product-open data-name="ساندويتش حلوم" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/halloumi-sandwich.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/tuna-olive-sandwich.webp" srcset="../assets/images/products/tuna-olive-sandwich.webp 600w, ../assets/images/products/1000/tuna-olive-sandwich.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ساندويتش تونة بالزيتون" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">ساندويتش تونة بالزيتون</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ساندويتش تونة بالزيتون"
-                  data-product-open data-name="ساندويتش تونة بالزيتون" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/tuna-olive-sandwich.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/turkey-brown-diet-sandwich.webp" srcset="../assets/images/products/turkey-brown-diet-sandwich.webp 600w, ../assets/images/products/1000/turkey-brown-diet-sandwich.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ساندويتش تركي بخبز أسمر دايت" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">ساندويتش تركي بخبز أسمر دايت</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ساندويتش تركي بخبز أسمر دايت"
-                  data-product-open data-name="ساندويتش تركي بخبز أسمر دايت" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/turkey-brown-diet-sandwich.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/falafel-sandwich.webp" srcset="../assets/images/products/falafel-sandwich.webp 600w, ../assets/images/products/1000/falafel-sandwich.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="ساندويتش فلافل" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">ساندويتش فلافل</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل ساندويتش فلافل"
-                  data-product-open data-name="ساندويتش فلافل" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/falafel-sandwich.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/mexican-wrap.webp" srcset="../assets/images/products/mexican-wrap.webp 600w, ../assets/images/products/1000/mexican-wrap.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="راب مكسيكي" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">راب مكسيكي</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل راب مكسيكي"
-                  data-product-open data-name="راب مكسيكي" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/mexican-wrap.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/plain-croissant.webp" srcset="../assets/images/products/plain-croissant.webp 600w, ../assets/images/products/1000/plain-croissant.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كرواسون سادة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">كرواسون سادة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كرواسون سادة"
-                  data-product-open data-name="كرواسون سادة" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/plain-croissant.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/cheese-croissant.webp" srcset="../assets/images/products/cheese-croissant.webp 600w, ../assets/images/products/1000/cheese-croissant.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كرواسون جبنة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">كرواسون جبنة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كرواسون جبنة"
-                  data-product-open data-name="كرواسون جبنة" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/cheese-croissant.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/chocolate-croissant.webp" srcset="../assets/images/products/chocolate-croissant.webp 600w, ../assets/images/products/1000/chocolate-croissant.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كرواسون شوكولاتة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">كرواسون شوكولاتة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كرواسون شوكولاتة"
-                  data-product-open data-name="كرواسون شوكولاتة" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/chocolate-croissant.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="sandwiches-croissants">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/zaatar-croissant.webp" srcset="../assets/images/products/zaatar-croissant.webp 600w, ../assets/images/products/1000/zaatar-croissant.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="كرواسون زعتر" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">الساندوتشات والكرواسون</p>
-                <h3 class="menu-card__name">كرواسون زعتر</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل كرواسون زعتر"
-                  data-product-open data-name="كرواسون زعتر" data-category="الساندوتشات والكرواسون" data-image="../assets/images/products/1000/zaatar-croissant.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="snacks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/mixed-dragees.webp" srcset="../assets/images/products/mixed-dragees.webp 600w, ../assets/images/products/1000/mixed-dragees.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="دراجيه مشكلة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">السناكس</p>
-                <h3 class="menu-card__name">دراجيه مشكلة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل دراجيه مشكلة"
-                  data-product-open data-name="دراجيه مشكلة" data-category="السناكس" data-image="../assets/images/products/1000/mixed-dragees.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="snacks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/pecan-dragees.webp" srcset="../assets/images/products/pecan-dragees.webp 600w, ../assets/images/products/1000/pecan-dragees.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="دراجيه البيكان" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">السناكس</p>
-                <h3 class="menu-card__name">دراجيه البيكان</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل دراجيه البيكان"
-                  data-product-open data-name="دراجيه البيكان" data-category="السناكس" data-image="../assets/images/products/1000/pecan-dragees.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
-          </li>
-          <li class="menu-item" data-category="snacks">
-            <article class="menu-card">
-              <div class="menu-card__media"><img src="../assets/images/products/chocolate-pretzel.webp" srcset="../assets/images/products/chocolate-pretzel.webp 600w, ../assets/images/products/1000/chocolate-pretzel.webp 1000w" sizes="(min-width: 1200px) 300px, (min-width: 760px) 30vw, 48vw" alt="برتزل بالشوكولاتة" width="600" height="600" loading="lazy" decoding="async"></div>
-              <div class="menu-card__body">
-                <p class="menu-card__cat">السناكس</p>
-                <h3 class="menu-card__name">برتزل بالشوكولاتة</h3>
-                <button class="menu-card__more" type="button" aria-haspopup="dialog" aria-label="عرض تفاصيل برتزل بالشوكولاتة"
-                  data-product-open data-name="برتزل بالشوكولاتة" data-category="السناكس" data-image="../assets/images/products/1000/chocolate-pretzel.webp">عرض التفاصيل <svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-              </div>
-            </article>
+        <ul class="cat-grid cat-grid--5" role="list">
+          <li class="cat-card-item" data-reveal style="--reveal-delay:0ms">
+            <a class="cat-card" href="./hot-coffee/" aria-label="اكتشف القهوة الساخنة">
+              <span class="cat-card__media"><img src="../assets/images/products/cappuccino.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span>
+              <span class="cat-card__body">
+                <span class="cat-card__text">
+                  <span class="cat-card__name">القهوة الساخنة</span>
+                </span>
+                <span class="cat-card__arrow"><svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+          </li>
+          <li class="cat-card-item" data-reveal style="--reveal-delay:80ms">
+            <a class="cat-card" href="./hot-drinks/" aria-label="اكتشف المشروبات الساخنة">
+              <span class="cat-card__media"><img src="../assets/images/products/hot-chocolate.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span>
+              <span class="cat-card__body">
+                <span class="cat-card__text">
+                  <span class="cat-card__name">المشروبات الساخنة</span>
+                </span>
+                <span class="cat-card__arrow"><svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+          </li>
+          <li class="cat-card-item" data-reveal style="--reveal-delay:160ms">
+            <a class="cat-card" href="./iced-coffee/" aria-label="اكتشف القهوة الباردة">
+              <span class="cat-card__media"><img src="../assets/images/products/iced-caramel-macchiato.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span>
+              <span class="cat-card__body">
+                <span class="cat-card__text">
+                  <span class="cat-card__name">القهوة الباردة</span>
+                </span>
+                <span class="cat-card__arrow"><svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+          </li>
+          <li class="cat-card-item" data-reveal style="--reveal-delay:240ms">
+            <a class="cat-card" href="./crash/" aria-label="اكتشف الكراش">
+              <span class="cat-card__media"><img src="../assets/images/products/red-velvet-crash.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span>
+              <span class="cat-card__body">
+                <span class="cat-card__text">
+                  <span class="cat-card__name">الكراش</span>
+                </span>
+                <span class="cat-card__arrow"><svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+          </li>
+          <li class="cat-card-item" data-reveal style="--reveal-delay:320ms">
+            <a class="cat-card" href="./refreshing-drinks/" aria-label="اكتشف المشروبات المنعشة">
+              <span class="cat-card__media"><img src="../assets/images/products/blue-hawaii-mojito.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span>
+              <span class="cat-card__body">
+                <span class="cat-card__text">
+                  <span class="cat-card__name">المشروبات المنعشة</span>
+                </span>
+                <span class="cat-card__arrow"><svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
           </li>
         </ul>
-
-        <nav class="pagination" aria-label="التنقل بين الصفحات" hidden data-menu-pagination></nav>
       </div>
     </section>
-
-    <!-- Product details popup (filled by js/popup.js from the clicked card) -->
-    <dialog class="product-dialog" aria-labelledby="pd-title" data-product-dialog>
-      <button class="product-dialog__close" type="button" data-product-close>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <span class="visually-hidden">إغلاق</span>
-      </button>
-      <div class="product-dialog__inner">
-        <div class="product-dialog__media"><img src="" alt="" width="1000" height="1000" data-pd-image></div>
-        <div class="product-dialog__body">
-          <p class="product-dialog__cat" data-pd-category></p>
-          <h2 class="product-dialog__title" id="pd-title" data-pd-name></h2>
-
-          <!-- PENDING: ingredients, sizes, prices and calories — no invented values (plan.md §5.1) -->
-          <h3 class="product-dialog__label">المكونات</h3>
-          <p class="product-dialog__pending">التفاصيل قيد التأكيد.</p>
-
-          <table class="product-dialog__table">
-            <thead><tr><th scope="col">الحجم</th><th scope="col">السعر</th><th scope="col">السعرات</th></tr></thead>
-            <tbody>
-              <tr><td aria-hidden="true">—</td><td aria-hidden="true">—</td><td aria-hidden="true">—</td></tr>
-              <tr><td aria-hidden="true">—</td><td aria-hidden="true">—</td><td aria-hidden="true">—</td></tr>
-              <tr><td aria-hidden="true">—</td><td aria-hidden="true">—</td><td aria-hidden="true">—</td></tr>
-              <tr><td aria-hidden="true">—</td><td aria-hidden="true">—</td><td aria-hidden="true">—</td></tr>
-            </tbody>
-          </table>
-          <p class="product-dialog__pending">التفاصيل قيد التأكيد.</p>
+    <section class="menu-group menu-group--food" id="food" aria-labelledby="group-food">
+      <div class="container">
+        <div class="menu-group__head">
+          <h2 class="heading menu-group__title" id="group-food">الأكل</h2>
         </div>
+        <ul class="cat-grid cat-grid--3" role="list">
+          <li class="cat-card-item" data-reveal style="--reveal-delay:0ms">
+            <a class="cat-card" href="./bakery-desserts/" aria-label="اكتشف المخبوزات والحلويات">
+              <span class="cat-card__media"><img src="../assets/images/products/chocolate-muffin.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span>
+              <span class="cat-card__body">
+                <span class="cat-card__text">
+                  <span class="cat-card__name">المخبوزات والحلويات</span>
+                </span>
+                <span class="cat-card__arrow"><svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+          </li>
+          <li class="cat-card-item" data-reveal style="--reveal-delay:80ms">
+            <a class="cat-card" href="./sandwiches-croissants/" aria-label="اكتشف الساندوتشات والكرواسون">
+              <span class="cat-card__media"><img src="../assets/images/products/chocolate-croissant.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span>
+              <span class="cat-card__body">
+                <span class="cat-card__text">
+                  <span class="cat-card__name">الساندوتشات والكرواسون</span>
+                </span>
+                <span class="cat-card__arrow"><svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+          </li>
+          <li class="cat-card-item" data-reveal style="--reveal-delay:160ms">
+            <a class="cat-card" href="./snacks/" aria-label="اكتشف السناكس">
+              <span class="cat-card__media"><img src="../assets/images/products/chocolate-pretzel.webp" alt="" width="600" height="600" loading="lazy" decoding="async"></span>
+              <span class="cat-card__body">
+                <span class="cat-card__text">
+                  <span class="cat-card__name">السناكس</span>
+                </span>
+                <span class="cat-card__arrow"><svg class="icon-flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
-    </dialog>
-
+    </section>
   </main>
 
   <footer class="site-footer">

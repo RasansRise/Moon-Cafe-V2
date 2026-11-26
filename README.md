@@ -6,8 +6,9 @@ Static HTML / CSS / vanilla JS. No build step, no framework, no GSAP dependency.
 |---|---|---|
 | `/` | `index.html` | Arabic, RTL (default) |
 | `/en/` | `en/index.html` | English, LTR |
-| `/menu/` | `menu/index.html` | Arabic menu (generated) |
-| `/en/menu/` | `en/menu/index.html` | English menu (generated) |
+| `/menu/` | `menu/index.html` | Arabic menu landing: categories (generated) |
+| `/menu/{category}/` | `menu/{category}/index.html` ×8 | Arabic category pages (generated) |
+| `/en/menu/` + `/en/menu/{category}/` | same under `en/` | English (generated) |
 
 ## Run locally
 
@@ -73,16 +74,15 @@ python3 -m http.server 8000
 - **Rewards**: the cup appears alone first, then the heading, the four boxes and the CTA appear together in one step. The section is 200svh tall.
 - **Mega Menu fix**: a variable-name clash with the drawer script stopped the dropdown from opening. Fixed by renaming (`drawerPanel`, `isMegaOpen`).
 
-## Menu page (2026-11-25)
+## Menu (categories structure, 2026-11-26)
 
-- **All 75 products on one page**, with a category **dropdown** (an accessible listbox: All, then Drinks / Food groups with counts, keyboard arrows/Enter/Escape) and pagination (12 per page). The toolbar sticks under the header.
-- **Product names** come from the image file names: hyphens become spaces and each word is capitalised (`cookies-and-cream` → "Cookies And Cream"). Arabic names come from the client CSV (`name.ar` in `products.json`). Products that also appear in the client's menu list (2026-11-25) use that list's exact EN + AR names, and their image files were renamed to match (for example `latte.webp` → `caffe-latte.webp`).
-- **Data**: `data/products.json` holds each product's category, name and image. Category assignment was done by hand following `menu-inventory.md`. "crush" files go under Crash, and the new items (teas, mojitos, dragées, pretzel, bag coffee maker) went to the closest category.
-- **Images**: `assets/images/products/` holds 600px webp files (about 46 KB each) for the grid, and `assets/images/products/1000/` holds the full size used via `srcset`. Images are lazy-loaded.
-- **Build**: run `python3 tools/build-menu.py` after editing `products.json` or the homepage header/footer. It writes both menu pages with every product in static HTML (crawlable, and visible without JS). `js/menu.js` adds the filters and pagination on top.
-- **Shareable URLs**: `?category=hot-coffee&page=2`, and the Back button works. Mega-menu category links now point to `menu/?category=…`, which replaces the planned separate category pages. On the menu page itself they filter in place without reloading.
-- **Product popup** (`js/popup.js`, native `<dialog>`): the whole card, or its "View details" button, opens it. A black overlay with blur covers the page. Escape, the × button or a click on the overlay closes it (with a fade-out), focus is trapped inside while it is open and returns to the card afterwards, and page scrolling is locked. It shows only known data: image (1000px), name and category. Ingredients and the size/price/calories table are shown as placeholders ("—" / "Details pending confirmation").
-- **Still pending**: prices, calories and ingredients.
+- **Menu landing** (`/menu/`): category cards grouped under two headings, **Drinks** (5 categories) and **Food** (3). The desktop layout follows design.md: Drinks 3 + 2 wider, Food 3; tablet shows 2 columns and mobile 1. Each card shows a product image, the category name and a gold arrow (no product counts anywhere).
+- **Category pages** (`/menu/{category}/`, 8 per language): a breadcrumb (Menu › Drinks/Food › Category), H1, a product grid using the same cards, and the **product popup** (`js/popup.js`, native `<dialog>`, black overlay; Escape, ×, or a click on the overlay closes it; focus is trapped and then returned). Previous/next category links and a "Back to menu" button sit at the bottom. The language switch goes to the same category in the other language.
+- The earlier single page with filters and pagination is **removed** (`js/menu.js` and its CSS deleted). Mega-menu links point to the category pages again.
+- **Names**: products that appear in the client's menu list (2026-11-25) use that list's exact EN + AR names, and their image files were renamed to match. Other products use the client CSV names.
+- **Data**: `data/products.json` holds categories (group and cover image), groups and products. Images: 600px versions in `assets/images/products/`, full size in `products/1000/`.
+- **Build**: `python3 tools/build-menu.py` writes all 18 menu pages from `products.json` plus the homepage header/footer.
+- **Still pending**: prices, calories, ingredients, and confirmation of the "marble muffin" image (it looks like blueberry).
 
 ## Other notes
 

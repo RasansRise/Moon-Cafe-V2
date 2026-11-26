@@ -6,56 +6,72 @@
       "name": {
         "ar": "القهوة الساخنة",
         "en": "Hot Coffee"
-      }
+      },
+      "group": "drinks",
+      "cover": "cappuccino"
     },
     {
       "id": "hot-drinks",
       "name": {
         "ar": "المشروبات الساخنة",
         "en": "Hot Drinks"
-      }
+      },
+      "group": "drinks",
+      "cover": "hot-chocolate"
     },
     {
       "id": "iced-coffee",
       "name": {
         "ar": "القهوة الباردة",
         "en": "Iced Coffee"
-      }
+      },
+      "group": "drinks",
+      "cover": "iced-caramel-macchiato"
     },
     {
       "id": "crash",
       "name": {
         "ar": "الكراش",
         "en": "Crash"
-      }
+      },
+      "group": "drinks",
+      "cover": "red-velvet-crash"
     },
     {
       "id": "refreshing-drinks",
       "name": {
         "ar": "المشروبات المنعشة",
         "en": "Refreshing Drinks"
-      }
+      },
+      "group": "drinks",
+      "cover": "blue-hawaii-mojito"
     },
     {
       "id": "bakery-desserts",
       "name": {
         "ar": "المخبوزات والحلويات",
         "en": "Bakery & Desserts"
-      }
+      },
+      "group": "food",
+      "cover": "chocolate-muffin"
     },
     {
       "id": "sandwiches-croissants",
       "name": {
         "ar": "الساندوتشات والكرواسون",
         "en": "Sandwiches & Croissants"
-      }
+      },
+      "group": "food",
+      "cover": "chocolate-croissant"
     },
     {
       "id": "snacks",
       "name": {
         "ar": "السناكس",
         "en": "Snacks"
-      }
+      },
+      "group": "food",
+      "cover": "chocolate-pretzel"
     }
   ],
   "products": [
@@ -185,7 +201,7 @@
       "categoryId": "hot-coffee",
       "name": {
         "en": "Bag Coffee Maker",
-        "ar": "دالة قهوة سعودي"
+        "ar": "أداة تحضير القهوة بالأكياس"
       },
       "image": "/assets/images/products/bag-coffee-maker.webp",
       "imageLarge": "/assets/images/products/1000/bag-coffee-maker.webp",
@@ -958,6 +974,22 @@
       "image": "/assets/images/products/chocolate-pretzel.webp",
       "imageLarge": "/assets/images/products/1000/chocolate-pretzel.webp",
       "displayOrder": 3
+    }
+  ],
+  "groups": [
+    {
+      "id": "drinks",
+      "name": {
+        "ar": "المشروبات",
+        "en": "Drinks"
+      }
+    },
+    {
+      "id": "food",
+      "name": {
+        "ar": "الأكل",
+        "en": "Food"
+      }
     }
   ]
 }
